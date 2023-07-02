@@ -1,3 +1,4 @@
+"use strict"
 $('.carousel').slick({
   slidesToShow: 1,  //可以控制每個輪播有幾張圖片
   dots: true,
@@ -10,17 +11,18 @@ $('.carousel').slick({
 });
 
 // ABOUT
-"use strict";
-// https://www.google.com/search?q=auto+and+manual+slider&oq=auto+and+manual+slider&aqs=chrome..69i57j0i7i30.24341j0j7&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:a32e4f99,vid:bW8X-tt5AZQ
-
-var slides = document.querySelectorAll(".slide");
-var aboutBtns = document.querySelectorAll(".aboutBtn");
+const slides = document.querySelectorAll(".slide");
+const numberOfSlides = slides.length;
+let slideNumber = 0;
 let currentSlide = 1;
-let rumFirstViewClicked = document.querySelector('.icon4') //預覽放大icon
+let playSlider;
+const aboutBtns = document.querySelectorAll(".aboutBtn");
+const rumFirstViewMouseOver = document.querySelector('.icon4')
+let active = document.getElementsByClassName("active");
 
-// JavaScript for image slider manual navigation
-var manualNav = function (manual) {
-  // 都先去除 class name .active
+// JavaScript for image slider manual
+let manualNav = function (manual) {
+  stopShow();
   slides.forEach((slide) => {
     slide.classList.remove("active");
     aboutBtns.forEach((aboutBtn) => {
@@ -30,52 +32,68 @@ var manualNav = function (manual) {
 
   slides[manual].classList.add("active");
   aboutBtns[manual].classList.add("active");
-  // click aboutBtns 同時slides[i]和aboutBtns[i]加上active
 };
+
 aboutBtns.forEach((aboutBtn, i) => {
   aboutBtn.addEventListener("click", () => {
-    // forEach 去找被點擊的按鈕
-    manualNav(i); // i帶入函式的參數manual，slides[i]，加上active的class name
-    currentSlide = i; //更新目前頁面的變數值
+    manualNav(i);
+    currentSlide = i;
   });
 });
-// JavaScript for image slider autoplay navigation
-var repeat = function (activeClass) {
-  let active = document.getElementsByClassName("active");
-  let i = 1;
 
-  var repeater = () => {
-    setTimeout(function () {
-      //先刪除先前的active
-      [...active].forEach((activeSlide) => {
-        activeSlide.classList.remove("active");
-      });
+function detectHoverIcons() {
+  const iconsArea = document.querySelector(".icons-area");
+  iconsArea.addEventListener('mouseover', (event) => {
+    let target = event.target  //svg
+    if(target.tagName === 'svg') {
+      console.log('mouseover event hover target')
+        stopShow();
+    }
+  })
 
-      slides[i].classList.add("active");
-      aboutBtns[i].classList.add("active");
-      i++;
-
-      if (slides.length === i) {
-        i = 0;
+  iconsArea.addEventListener('mouseout', (event) => {
+      let target = event.target  //svg
+      if(target.tagName === 'svg') {
+        setTimeout(() => {
+          autoplay()  
+        }, 5000)
       }
-      if (i >= slides.length) {
-        return;
-      }
-      repeater();
-    }, 5000);
-  };
-  repeater();
-};
-function ifrumFirstViewClicked() {
-  //預覽放大icon click取消改成mouseover icon放大樣式取消
-  rumFirstViewClicked.addEventListener('mouseover', () => {
-    rumFirstViewClicked.classList.remove("firstView")
-    console.log(rumFirstViewClicked)
   })
 }
-// 呼叫函式
-repeat();
-ifrumFirstViewClicked()//預覽放大icon click後 icon放大樣式取消
+
+function autoplay() {
+    playSlider = setInterval(function () {
+    slides.forEach((slide) => {
+      slide.classList.remove("active");
+    });
+    aboutBtns.forEach((aboutBtn) => {
+      aboutBtn.classList.remove("active");
+    });
+    slideNumber++;
+    if (slideNumber > numberOfSlides - 1) {
+      slideNumber = 0;
+    }
+    slides[slideNumber].classList.add("active");
+    aboutBtns[slideNumber].classList.add("active");
+  }, 5000);
+}
+
+function stopShow () {
+  clearInterval(playSlider);
+}
+
+function ifRumFirstViewMouseOver() {
+  rumFirstViewMouseOver.addEventListener('mouseover', () => {
+    rumFirstViewMouseOver.classList.remove("firstView")
+    setTimeout(()=> {
+      stopShow()
+    }, 1000)
+  })
+}
+
+autoplay() 
+detectHoverIcons()
+ifRumFirstViewMouseOver();
 
 // const buttons = document.querySelectorAll("[data-about-btn]");
 
