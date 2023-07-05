@@ -64,7 +64,7 @@ function validForm(inputArr) {
   if(n === 4) {
     formRowContainer.classList.add('submitted');
       btnText.innerHTML = 'Thanks';
-      submitButton.classList.add('active');
+      submitButton.classList.add('submitButton-active');
     }
 }
 
