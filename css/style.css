@@ -846,7 +846,7 @@ h2.about-page-two-h2 {
 
 .icon4.firstView .button_border .border_in .bg_focus {
 	/*  *****圖要再給****  */
-	background-image: url("../images/icon-rum.png");
+	background-image: url("../images/rum.png");
 }
 
 .icon4.firstView .button_border .border_in {
@@ -2769,7 +2769,7 @@ textarea:hover,
   transition: background 1200ms linear;
 }
 
-.active {
+.submitButton-active {
   background: var(--caneles-yellow);
 }
 
@@ -2795,7 +2795,7 @@ svg path {
   stroke-dashoffset: 34;
   stroke-linecap: round;
 }
-.active .check-box {
+.submitButton-active .check-box {
   animation: moveRight 3s ease-in-out;
   transition: 1s;
   right:0;
@@ -2808,7 +2808,7 @@ svg path {
   to { right: 0;
   opacity: 1;}
 }
-.active svg path {
+.submitButton-active svg path {
   stroke-dashoffset: 0;
   transition: 1s;
   transition-delay: 1s;
