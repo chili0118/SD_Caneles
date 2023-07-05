@@ -24,7 +24,7 @@ function setSuccess(input) {
 
 // check tel is valid
 function validTel(input) {
-  const regex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4}$/im
+  const regex = /^[\+]?[(]?[0]{1}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{3}$/im
   if(regex.test(input.value.trim())) {
     setSuccess(input)
     console.log(regex.test(input.value.trim()))
