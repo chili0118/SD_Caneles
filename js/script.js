@@ -32,6 +32,7 @@ let manualNav = function (manual) {
 
   slides[manual].classList.add("active");
   aboutBtns[manual].classList.add("active");
+  autoplay()
 };
 
 aboutBtns.forEach((aboutBtn, i) => {
@@ -54,9 +55,10 @@ function detectHoverIcons() {
   iconsArea.addEventListener('mouseout', (event) => {
       let target = event.target  //svg
       if(target.tagName === 'svg') {
+        stopShow()
         setTimeout(() => {
           autoplay()  
-        }, 5000)
+        }, 1000)
       }
   })
 }
@@ -75,7 +77,7 @@ function autoplay() {
     }
     slides[slideNumber].classList.add("active");
     aboutBtns[slideNumber].classList.add("active");
-  }, 5000);
+  }, 4000);
 }
 
 function stopShow () {
