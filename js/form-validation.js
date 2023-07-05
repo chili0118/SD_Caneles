@@ -22,6 +22,17 @@ function setSuccess(input) {
 	validationContainer.className = "validation-container success";
 }
 
+// check tel is valid
+function validTel(input) {
+  const regex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4}$/im
+  if(regex.test(input.value.trim())) {
+    setSuccess(input)
+    console.log(regex.test(input.value.trim()))
+  } else {
+    setError(input,'Phone number is not valid');
+  }
+}
+
 //check email is valid
 function validEmail(input) {
 	const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -47,7 +58,7 @@ function validForm(inputArr) {
   inputArr.forEach(function(input) {
     const validationContainer = input.parentElement;
     if(validationContainer.classList.contains("success")) {
-       n++
+      n++
     }
   })
   if(n === 4) {
@@ -67,5 +78,5 @@ form.addEventListener('submit',function(e) {
     e.preventDefault();
     checkRequired([userName, userPhone, userEmail, userMessage]);
     validEmail(userEmail);
- validForm([userName, userPhone, userEmail, userMessage])
+  validForm([userName, userPhone, userEmail, userMessage])
 });
