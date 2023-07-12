@@ -16,6 +16,7 @@ const numberOfSlides = slides.length;
 let slideNumber = 0;
 let currentSlide = 1;
 let playSlider;
+const iconsArea = document.querySelector(".icons-area");
 const aboutBtns = document.querySelectorAll(".aboutBtn");
 const rumFirstViewMouseOver = document.querySelector('.icon4')
 let active = document.getElementsByClassName("active");
@@ -41,27 +42,6 @@ aboutBtns.forEach((aboutBtn, i) => {
     currentSlide = i;
   });
 });
-
-function detectHoverIcons() {
-  const iconsArea = document.querySelector(".icons-area");
-  iconsArea.addEventListener('mouseover', (event) => {
-    let target = event.target  //svg
-    if(target.tagName === 'svg') {
-      console.log('mouseover event hover target')
-        stopShow();
-    }
-  })
-
-  iconsArea.addEventListener('mouseout', (event) => {
-      let target = event.target  //svg
-      if(target.tagName === 'svg') {
-        stopShow()
-        setTimeout(() => {
-          autoplay()  
-        }, 1000)
-      }
-  })
-}
 
 function autoplay() {
     playSlider = setInterval(function () {
@@ -89,37 +69,53 @@ function ifRumFirstViewMouseOver() {
     rumFirstViewMouseOver.classList.remove("firstView")
     setTimeout(()=> {
       stopShow()
-    }, 1000)
+    }, 300)
   })
 }
-
-autoplay() 
-detectHoverIcons()
+autoplay()
 ifRumFirstViewMouseOver();
 
-// const buttons = document.querySelectorAll("[data-about-btn]");
+iconsArea.addEventListener("mouseover", (event) => {
+  stopShow ()
+  let target = event.target; 
+  if (target.tagName !== "svg") {
+    return;
+  } else if (target.tagName === "svg") {
+      stopShow();
+  }
 
-// buttons.forEach((button) => {
-//     button.addEventListener("click", () => {
-//         const offset = button.dataset.aboutBtn === "next" ? 1 : -1;
-//         const slides = button.closest("[data-about-box]").querySelector("[data-about-slides]");
-//         // 如果是next的話，return value 1，或-1
+  let bouncingTexts = target.closest(".icons").children[2].children[0].innerHTML;
+  let wrapText = ""
+  for (let i = 0; i < bouncingTexts.length; i++) {
+    wrapText += "<em>" + bouncingTexts.charAt(i) + "</em>";
+  }
+  
+  target.closest(".icons").children[2].children[0].innerHTML= wrapText;
+  let letters = document.getElementsByTagName("em");
+  let j = 0;
+  
+  function applyBounce( ) {
+    if (letters[j] !== undefined) {
+    setTimeout(function () {
+      letters[j].className = "bounce-text";
+      j++;
+      if (j < letters.length) {
+        applyBounce();
+      }
+    }, 250);
+    }
+  }
+  applyBounce( )
+});
 
-//         const activeSlide = slides.querySelector("[data-about-active]");
-//         let newIndex = [...slides.children].indexOf(activeSlide) + offset;
-//         console.log('offset', offset);
-//         // console.log('newIndex', newIndex);
-
-//         if (newIndex < 0) {
-//             newIndex = 1;
-//         }
-//         if (newIndex >= slides.children.length) {
-//             newIndex = 0;
-//         }
-//         slides.children[newIndex].dataset.aboutActive = true;
-//         delete activeSlide.dataset.aboutActive;
-//     });
-// });
+iconsArea.addEventListener("mouseout", (event) => {
+  let target = event.target; //svg
+  let iconName =  target.closest(".icons").dataset.name
+  if (target.tagName === "svg") {
+    target.closest(".icons").children[2].children[0].innerHTML= iconName
+    autoplay() 
+  }
+});
 
 // FAQ
 
