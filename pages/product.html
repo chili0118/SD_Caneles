@@ -32,6 +32,7 @@
             <a href="./news.html"> 最新消息</a>
             <a href="./shops.html"> 店鋪夥伴</a>
             <a href="./product.html"> 商品一覽</a>
+            <a href="./faq.html"> FAQ</a>
             <div class="menu-img"></div>
         </nav>
     </div>
@@ -40,124 +41,155 @@
         <div id="product-page-title" class="page-title">
             <h2>PRODUCT</h2>
         </div>
-     
+
         <div id="product-page-content">
-            <div class="product-content-left"></div>
+            <div class="product-content-left">
+                <div class="product-select">
+                    <div class="product-content-left-1">
+                        <h3>口味</h3>
+                        <ul class="product-taste">
+                            <li data-taste_target="all"><label><input type="checkbox"><span>全部</span></label></li>
+                            <li data-taste_target="classic"><label><input type="checkbox"><span>原味</span></label></li>
+                            <li data-taste_target="matcha"><label><input type="checkbox"><span>抹茶</span></label></li>
+                            <li data-taste_target="honey"><label><input type="checkbox"><span>蜂蜜</span></label></li>
+                            <li data-taste_target="cinnamon"><label><input type="checkbox"><span>肉桂</span></label></li>
+                            <li data-taste_target="coffee"><label><input type="checkbox"><span>咖啡</span></label></li>
+                            <li data-taste_target="chocolate"><label><input type="checkbox"><span>巧克力</span></label>
+                            </li>
+                            <li data-taste_target="fruit"><label><input type="checkbox"><span>鮮甜水果</span></label></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div class="product-content-right">
-                <div class="product-1">
-                    <a href="" class="product-item">
-                        <div class="product-img">
-                            <img src="../images/product.png" alt="">
-                        </div>
-                        <div class="product-text">
-                            <h3>經典原味可麗露</h3>
-                            <span>$45</span>
-                        </div>
-                        <div class="product-shop">
-                            <span>MJ甜品</span>
-                        </div>
-                    </a>
-                    <a href="" class="product-item">
-                        <div class="product-img">
-                            <img src="../images/product.png" alt="">
-                        </div>
-                        <div class="product-text">
-                            <h3>巧克力可麗露</h3>
-                            <span>$55</span>
-                        </div>
-                        <div class="product-shop">
-                            <span>海點麵包坊</span>
-                        </div>
-                    </a>
-                    <a href="" class="product-item">
-                        <div class="product-img">
-                            <img src="../images/product.png" alt="">
-                        </div>
-                        <div class="product-text">
-                            <h3>抹茶可麗露</h3>
-                            <span>$55</span>
-                        </div>
-                        <div class="product-shop">
-                            <span>鑽品咖啡館</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="product-2">
-                    <a href="" class="product-item">
-                        <div class="product-img">
-                            <img src="../images/product.png" alt="">
-                        </div>
-                        <div class="product-text">
-                            <h3>草莓可麗露</h3>
-                            <span>$75</span>
-                        </div>
-                        <div class="product-shop">
-                            <span>熊貝貝</span>
-                        </div>
-                    </a>
-                    <a href="" class="product-item">
-                        <div class="product-img">
-                            <img src="../images/product.png" alt="">
-                        </div>
-                        <div class="product-text">
-                            <h3>黑可可可麗露</h3>
-                            <span>$55</span>
-                        </div>
-                        <div class="product-shop">
-                            <span>Canelés</span>
-                        </div>
-                    </a>
-                    <a href="" class="product-item">
-                        <div class="product-img">
-                            <img src="../images/product.png" alt="">
-                        </div>
-                        <div class="product-text">
-                            <h3>蜂蜜可麗露</h3>
-                            <span>$65</span>
-                        </div>
-                        <div class="product-shop">
-                            <span>Happy Cake</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="product-3">
-                    <a href="" class="product-item">
-                        <div class="product-img">
-                            <img src="../images/product.png" alt="">
-                        </div>
-                        <div class="product-text">
-                            <h3>抹茶可麗露</h3>
-                            <span>$55</span>
-                        </div>
-                        <div class="product-shop">
-                            <span>MU MING</span>
-                        </div>
-                    </a>
-                    <a href="" class="product-item">
-                        <div class="product-img">
-                            <img src="../images/product.png" alt="">
-                        </div>
-                        <div class="product-text">
-                            <h3>肉桂可麗露</h3>
-                            <span>$65</span>
-                        </div>
-                        <div class="product-shop">
-                            <span>御品甜點</span>
-                        </div>
-                    </a>
-                    <a href="" class="product-item">
-                        <div class="product-img">
-                            <img src="../images/product.png" alt="">
-                        </div>
-                        <div class="product-text">
-                            <h3>經典原味可麗露</h3>
-                            <span>$55</span>
-                        </div>
-                        <div class="product-shop">
-                            <span>蕾妮亞甜點實驗室</span>
-                        </div>
-                    </a>
-                </div>
+                <ul class="product">
+                    <li class="shop-1" data-taste="classic">
+                        <a href="" class="product-item">
+                            <div class="product-img">
+                                <img src="../images/product.png" alt="">
+                            </div>
+                            <div class="product-text">
+                                <h3>經典原味可麗露</h3>
+                                <span>$45</span>
+                            </div>
+                            <div class="product-shop">
+                                <span>MJ甜品</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="shop-2" data-taste="chocolate">
+                        <a href="" class="product-item">
+                            <div class="product-img">
+                                <img src="../images/product.png" alt="">
+                            </div>
+                            <div class="product-text">
+                                <h3>巧克力可麗露</h3>
+                                <span>$55</span>
+                            </div>
+                            <div class="product-shop">
+                                <span>海點麵包坊</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="shop-3" data-taste="matcha">
+                        <a href="" class="product-item">
+                            <div class="product-img">
+                                <img src="../images/product.png" alt="">
+                            </div>
+                            <div class="product-text">
+                                <h3>抹茶可麗露</h3>
+                                <span>$55</span>
+                            </div>
+                            <div class="product-shop">
+                                <span>鑽品咖啡館</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="shop-4" data-taste="fruit">
+                        <a href="" class="product-item">
+                            <div class="product-img">
+                                <img src="../images/product.png" alt="">
+                            </div>
+                            <div class="product-text">
+                                <h3>草莓可麗露</h3>
+                                <span>$75</span>
+                            </div>
+                            <div class="product-shop">
+                                <span>熊貝貝</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="shop-5" data-taste="chocolate">
+                        <a href="" class="product-item">
+                            <div class="product-img">
+                                <img src="../images/product.png" alt="">
+                            </div>
+                            <div class="product-text">
+                                <h3>黑可可可麗露</h3>
+                                <span>$55</span>
+                            </div>
+                            <div class="product-shop">
+                                <span>Canelés</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="shop-6" data-taste="honey">
+                        <a href="" class="product-item">
+                            <div class="product-img">
+                                <img src="../images/product.png" alt="">
+                            </div>
+                            <div class="product-text">
+                                <h3>蜂蜜可麗露</h3>
+                                <span>$65</span>
+                            </div>
+                            <div class="product-shop">
+                                <span>Happy Cake</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="shop-7" data-taste="matcha">
+                        <a href="" class="product-item">
+                            <div class="product-img">
+                                <img src="../images/product.png" alt="">
+                            </div>
+                            <div class="product-text">
+                                <h3>抹茶可麗露</h3>
+                                <span>$55</span>
+                            </div>
+                            <div class="product-shop">
+                                <span>MU MING</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="shop-8" data-taste="cinnamon">
+                        <a href="" class="product-item">
+                            <div class="product-img">
+                                <img src="../images/product.png" alt="">
+                            </div>
+                            <div class="product-text">
+                                <h3>肉桂可麗露</h3>
+                                <span>$65</span>
+                            </div>
+                            <div class="product-shop">
+                                <span>御品甜點</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="shop-9" data-taste="classic">
+                        <a href="" class="product-item">
+                            <div class="product-img">
+                                <img src="../images/product.png" alt="">
+                            </div>
+                            <div class="product-text">
+                                <h3>經典原味可麗露</h3>
+                                <span>$55</span>
+                            </div>
+                            <div class="product-shop">
+                                <span>蕾妮亞甜點實驗室</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
 
@@ -174,6 +206,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
         crossorigin="anonymous"></script>
+    <script src="../js/product.js"></script>
 </body>
 
 </html>
