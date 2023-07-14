@@ -80,3 +80,53 @@ form.addEventListener('submit', function (e) {
     validEmail(userEmail);
     validForm([userName, userPhone, userEmail, userMessage])
 });
+
+// footer 訂閱電子報驗證
+function validationNewsletter() {
+    const newsletterForm = document.querySelector('#newsletterForm');
+    const newsletterInput = document.querySelector('#newsletter').value.trim()
+    const newsletterMsg = document.querySelector("#newsletterMsg");
+    const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+    const modalContainer = document.querySelector(".modal-container")
+    const popBtn = document.querySelector(".pop-btn")
+    const X = document.querySelector(".x")
+    
+    if (newsletterInput.match(pattern)) {
+        newsletterForm.classList.add("valid");
+        newsletterForm.classList.remove("invalid");
+        newsletterMsg.style.visibility = "visible";
+        newsletterMsg.innerHTML = "Your Email Address in valid";
+        newsletterMsg.style.color = "#00ff00";
+        popBtn.style.visibility = "visible";
+    } else {
+        newsletterForm.classList.remove("valid");
+        newsletterForm.classList.add("invalid");
+        newsletterMsg.style.visibility = "visible";
+        newsletterMsg.innerHTML = "Please enter valid Email Address";
+        newsletterMsg.style.color = "#ff0000";
+    }
+
+    if (newsletterInput === "") {
+        newsletterForm.classList.remove("valid");
+        newsletterForm.classList.remove("invalid");
+        newsletterMsg.innerHTML = "";
+    }
+    
+    popBtn.addEventListener("click", appear);
+
+    function appear() {
+        modalContainer.style.visibility = "visible";
+        newsletterMsg.style.visibility = "hidden";
+    }
+    X.addEventListener("click", disappearX);
+    function disappearX() {
+        modalContainer.style.display = "none";
+    }
+    modalContainer.addEventListener("click", disappearModalContainer)
+    function disappearModalContainer(e) {
+        if (e.target.className === "modal-container") {
+            modalContainer.style.display = "none";
+        }
+    }
+}
