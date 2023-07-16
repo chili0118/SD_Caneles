@@ -68,7 +68,7 @@ for (let i = 0; i < activityBtn.length; i++) {
 }
 
 
-const shopsData = [
+let shopsData = [
     // 01
     {
         id: 0,
@@ -340,4 +340,3 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-

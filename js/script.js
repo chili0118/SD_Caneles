@@ -129,9 +129,9 @@ $('.faq-list li').click(function () {
 const shops = [
   {
     title: 'bubble-1',
-    shopName: '海點麵包坊',
-    img: './images/banner-5.jpg',
-    logo: './images/dessert_logo-05.png',
+    shopName: 'Flower Dessert',
+    img: './images/shops-1.jpg',
+    logo: './images/dessert_logo-01.png',
   },
   {
     title: 'bubble-2',
@@ -153,24 +153,25 @@ const shops = [
   },
   {
     title: 'bubble-5',
-    shopName: '蕾妮亞甜點實驗室',
+    shopName: '海點麵包坊',
     img: './images/shops-5.jpg',
-    logo: './images/dessert_logo-06.png',
+    logo: './images/dessert_logo-05.png',
   },
   {
     title: 'bubble-6',
-    shopName: 'Canelé',
+    shopName: '蕾妮雅甜點實驗室',
     img: './images/shops-6.jpg',
-    logo: './images/dessert_logo-10.png',
+    logo: './images/dessert_logo-06.png',
   },
 ];
+
 let bubblesShops = document.querySelector('.bubbles-shops');
 
 function shopsImages(shops) {
   let htmlContent = ``;
   for (let i = 0; i < shops.length; i++) {
     htmlContent += `
-            <a href="" class='bubbles ${shops[i].title}'>
+            <a href="" class='bubbles ${shops[i].title}' data-num="${i}">
             <svg width="0" height="0" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid slice">
         <g>
           <defs>
@@ -329,3 +330,282 @@ function closePopup() {
   document.body.style.overflow = "auto";
   popup.style.display = "none";
 }
+
+let shopsData = [
+  // 01
+  {
+      id: 0,
+      brand: `Flower Dessert`,
+      bannerImg: `../images/shops-1.jpg`,
+      brandLogo: `../images/dessert_logo-01.png`,
+      open: `09:00 - 17:00`,
+      phone: `02-23928179`,
+      add: `台北市大安區新生南路三段84號一樓`,
+      product: [
+          {
+              productName: `原味可麗露`,
+              price: `40`
+          },
+          {
+              productName: `檸檬可麗露`,
+              price: `55`
+          },
+          {
+              productName: `肉桂可麗露`,
+              price: `50`
+          },
+          {
+              productName: `蜂蜜可麗露`,
+              price: `50`
+          },
+          {
+              productName: `巧克力可麗露`,
+              price: `55`
+          },
+      ]
+  },
+  // 02
+  {
+      id: 1,
+      brand: `鑽品咖啡館`,
+      bannerImg: `../images/shops-2.jpg`,
+      brandLogo: `../images/dessert_logo-02.png`,
+      open: `10:00 - 18:00`,
+      phone: `02-98765432`,
+      add: `台北市大同區重慶北路200號`,
+      product: [
+          {
+              productName: `原味可麗露`,
+              price: `40`
+          },
+          {
+              productName: `草莓可麗露`,
+              price: `65`
+          },
+          {
+              productName: `肉桂可麗露`,
+              price: `45`
+          }
+      ]
+  },
+  // 03
+  {
+      id: 2,
+      brand: `Happy Cake`,
+      bannerImg: `../images/shops-3.jpg`,
+      brandLogo: `../images/dessert_logo-03.png`,
+      open: `10:00 - 21:00`,
+      phone: `02-34567890`,
+      add: `台北市士林區天母西路300號`,
+      product: [
+          {
+              productName: `原味可麗露`,
+              price: `35`
+          },
+          {
+              productName: `可可可麗露`,
+              price: `50`
+          },
+          {
+              productName: `咖啡可麗露`,
+              price: `50`
+          },
+          {
+              productName: `抹茶可麗露`,
+              price: `55`
+          }
+      ]
+  },
+  // 04
+  {
+      id: 3,
+      brand: `MJ 甜品`,
+      bannerImg: `../images/shops-4.jpg`,
+      brandLogo: `../images/dessert_logo-04.png`,
+      open: `08:30 - 16:30`,
+      phone: `02-87654321`,
+      add: `台北市大同區重慶北路200號`,
+      product: [
+          {
+              productName: `原味可麗露`,
+              price: `35`
+          },
+          {
+              productName: `蜂蜜可麗露`,
+              price: `40`
+          },
+          {
+              productName: `抹茶可麗露`,
+              price: `40`
+          }
+      ]
+  },
+  // 05
+  {
+      id: 4,
+      brand: `海點麵包坊`,
+      bannerImg: `../images/shops-5.jpg`,
+      brandLogo: `../images/dessert_logo-05.png`,
+      open: `13:00 - 20:30`,
+      phone: `02-23456789`,
+      add: `台北市松山區西寧南路500號`,
+      product: [
+          {
+              productName: `原味可麗露`,
+              price: `35`
+          },
+          {
+              productName: `抹茶可麗露`,
+              price: `40`
+          }
+      ]
+  },
+  // 06
+  {
+      id: 5,
+      brand: `蕾妮雅甜點實驗室`,
+      bannerImg: `../images/shops-6.jpg`,
+      brandLogo: `../images/dessert_logo-06.png`,
+      open: `11:00 - 18:00`,
+      phone: `02-76543210`,
+      add: `台北市中正區瑞湖街600號`,
+      product: [
+          {
+              productName: `原味可麗露`,
+              price: `40`
+          },
+          {
+              productName: `抹茶可麗露`,
+              price: `50`
+          },
+          {
+              productName: `巧克力可麗露`,
+              price: `50`
+          }
+      ]
+  },
+  // 07
+  {
+      id: 6,
+      brand: `MU MING`,
+      bannerImg: `../images/shops-7.jpg`,
+      brandLogo: `../images/dessert_logo-07.png`,
+      open: `10:00 - 18:00`,
+      phone: `02-45678901`,
+      add: `台北市信義區基隆路700號`,
+      product: [
+          {
+              productName: `原味可麗露`,
+              price: `40`
+          },
+          {
+              productName: `巧克力可麗露`,
+              price: `50`
+          }
+      ]
+  },
+  // 08
+  {
+      id: 7,
+      brand: `熊貝貝`,
+      bannerImg: `../images/shops-8.jpg`,
+      brandLogo: `../images/dessert_logo-08.png`,
+      open: `10:00 - 21:00`,
+      phone: `02-65432109`,
+      add: `台北市大安區忠孝東路800號`,
+      product: [
+          {
+              productName: `原味可麗露`,
+              price: `45`
+          },
+          {
+              productName: `抹茶可麗露`,
+              price: `55`
+          },
+          {
+              productName: `肉桂可麗露`,
+              price: `55`
+          },
+          {
+              productName: `咖啡可麗露`,
+              price: `55`
+          },
+          {
+              productName: `甜橙可麗露`,
+              price: `60`
+          }
+      ]
+  },
+  // 09
+  {
+      id: 8,
+      brand: `御品甜點`,
+      bannerImg: `../images/shops-9.jpg`,
+      brandLogo: `../images/dessert_logo-09.png`,
+      open: `11:00 - 20:00`,
+      phone: `02-78905432`,
+      add: `台北市大同區舊莊街900號`,
+      product: [
+          {
+              productName: `原味可麗露`,
+              price: `45`
+          },
+          {
+              productName: `咖啡可麗露`,
+              price: `55`
+          },
+          {
+              productName: `蜂蜜可麗露`,
+              price: `60`
+          }
+      ]
+  },
+  // 10
+  {
+      id: 9,
+      brand: `Canelé`,
+      bannerImg: `../images/shops-10.jpg`,
+      brandLogo: `../images/dessert_logo-10.png`,
+      open: `14:00 - 22:00`,
+      phone: `02-32109876`,
+      add: `台北市信義區木柵路1001號`,
+      product: [
+          {
+              productName: `原味可麗露`,
+              price: `40`
+          },
+          {
+              productName: `抹茶可麗露`,
+              price: `50`
+          },
+          {
+              productName: `咖啡可麗露`,
+              price: `50`
+          }
+      ]
+  }
+];
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const brandBubble = document.querySelectorAll('.bubbles');
+  for (let i = 0; i < brandBubble.length; i++) {
+      brandBubble[i].addEventListener('click', function () {
+
+          const brandId = this.getAttribute('data-num');
+          const brandData = shopsData.find(brand => brand.id == brandId);
+          const brandUrl = '/pages/shop.html?id=' + brandId;
+
+          // 將資料存儲到 localStorage
+          localStorage.setItem('currentShop', JSON.stringify(brandData));
+
+          // 開啟新分頁
+          window.open(brandUrl, '_blank');
+      });
+  }
+});
+
+
+
+
+
