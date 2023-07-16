@@ -331,7 +331,7 @@ function closePopup() {
   popup.style.display = "none";
 }
 
-let shopsData = [
+let homeShopsData = [
   // 01
   {
       id: 0,
@@ -590,10 +590,10 @@ let shopsData = [
 document.addEventListener('DOMContentLoaded', function () {
   const brandBubble = document.querySelectorAll('.bubbles');
   for (let i = 0; i < brandBubble.length; i++) {
-      brandBubble[i].addEventListener('click', function () {
-
+      brandBubble[i].addEventListener('click', function (e) {
+        e.preventDefault();
           const brandId = this.getAttribute('data-num');
-          const brandData = shopsData.find(brand => brand.id == brandId);
+          const brandData = homeShopsData.find(brand => brand.id == brandId);
           const brandUrl = '/pages/shop.html?id=' + brandId;
 
           // 將資料存儲到 localStorage
