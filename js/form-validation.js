@@ -96,7 +96,6 @@ function validationNewsletter() {
         newsletterForm.classList.add("valid");
         newsletterForm.classList.remove("invalid");
         newsletterMsg.style.visibility = "visible";
-        newsletterMsg.innerHTML = "Your Email Address in valid";
         newsletterMsg.innerHTML = "Your Email Address in valid &#10003;";
         newsletterMsg.style.color = "#00ff00";
         popBtn.style.visibility = "visible";
@@ -116,9 +115,10 @@ function validationNewsletter() {
 
     popBtn.addEventListener("click", appear);
 
-    function appear() {
+    function appear(event) {
         modalContainer.style.visibility = "visible";
         newsletterMsg.style.visibility = "hidden";
+        event.preventDefault()
     }
     X.addEventListener("click", disappearX);
     function disappearX() {
