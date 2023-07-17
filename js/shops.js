@@ -68,7 +68,7 @@ for (let i = 0; i < activityBtn.length; i++) {
 }
 
 
-const shopsData = [
+let shopsData = [
     // 01
     {
         id: 0,
@@ -327,7 +327,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const brand = document.querySelectorAll('.shops li');
 
     for (let i = 0; i < brand.length; i++) {
-        brand[i].addEventListener('click', function () {
+        brand[i].addEventListener('click', function (e) {
+            e.preventDefault();
             const shopId = this.getAttribute('data-id');
             const shopData = shopsData.find(shop => shop.id == shopId);
             const shopUrl = 'shop.html?id=' + shopId;
@@ -340,4 +341,3 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-

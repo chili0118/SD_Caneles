@@ -91,12 +91,13 @@ function validationNewsletter() {
     const modalContainer = document.querySelector(".modal-container")
     const popBtn = document.querySelector(".pop-btn")
     const X = document.querySelector(".x")
-    
+
     if (newsletterInput.match(pattern)) {
         newsletterForm.classList.add("valid");
         newsletterForm.classList.remove("invalid");
         newsletterMsg.style.visibility = "visible";
         newsletterMsg.innerHTML = "Your Email Address in valid";
+        newsletterMsg.innerHTML = "Your Email Address in valid &#10003;";
         newsletterMsg.style.color = "#00ff00";
         popBtn.style.visibility = "visible";
     } else {
@@ -112,7 +113,7 @@ function validationNewsletter() {
         newsletterForm.classList.remove("invalid");
         newsletterMsg.innerHTML = "";
     }
-    
+
     popBtn.addEventListener("click", appear);
 
     function appear() {
@@ -121,12 +122,12 @@ function validationNewsletter() {
     }
     X.addEventListener("click", disappearX);
     function disappearX() {
-        modalContainer.style.display = "none";
+        modalContainer.style.visibility = "hidden";
     }
     modalContainer.addEventListener("click", disappearModalContainer)
     function disappearModalContainer(e) {
         if (e.target.className === "modal-container") {
-            modalContainer.style.display = "none";
+            modalContainer.style.visibility = "hidden";
         }
     }
 }

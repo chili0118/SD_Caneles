@@ -336,7 +336,7 @@ body::-webkit-scrollbar-track {
 	}
 
 	#menu a {
-		font-size: 1rem;
+		font-size: 1.5rem;
 	}
 
 	#nav-button::before {
@@ -358,6 +358,21 @@ body::-webkit-scrollbar-track {
 		background-size: 24px 24px;
 	}
 
+}
+
+@media (max-width: 414px) {
+	#menu a {
+		font-size: 1rem;
+	}
+
+	#nav-button {
+		right: 15px;
+	}
+
+	.header-box {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 }
 
 /* banner */
@@ -496,6 +511,18 @@ body::-webkit-scrollbar-track {
 	opacity: .6;
 }
 
+@media (max-width: 414px) {
+	.slick-dots li {
+		margin: 10px 0;
+	}
+}
+
+@media (max-width: 321px) {
+	.slick-dots {
+		display: none;
+	}
+}
+
 /* about */
 section#about {
 	position: relative;
@@ -624,6 +651,25 @@ section#about {
 		margin-bottom: 20px;
 		letter-spacing: 3px;
 		line-height: 1.5;
+	}
+}
+
+@media (max-width: 414px) {
+
+	.about-page-one {
+		justify-content: center;
+		padding: 30px 50px;
+	}
+
+	.about-page-one h2 {
+		font-size: 36px;
+		line-height: 36px;
+		margin-bottom: 30px;
+	}
+
+	.about-page-one p {
+		font-size: 16px;
+		letter-spacing: 1.5px;
 	}
 }
 
@@ -1290,6 +1336,17 @@ p em {
 
 }
 
+@media (max-width: 414px) {
+	h2.about-page-two-h2 {
+		font-size: 36px;
+		line-height: 36px;
+	}
+
+	.icons .text p.text-t {
+		font-size: 12.5px;
+	}
+}
+
 /* news */
 #news {
 	width: 100%;
@@ -1551,6 +1608,7 @@ p em {
 @media (max-width:768px) {
 	#news {
 		height: auto;
+		padding-top: 0;
 	}
 
 	.news-title {
@@ -1587,6 +1645,21 @@ p em {
 	.news-btn-more::after {
 		font-size: 1.2rem;
 		line-height: calc(20px - .6rem);
+	}
+}
+
+@media (max-width: 414px) {
+
+	#news {
+		padding: 0 20px 20px;
+	}
+
+	.news-title {
+		margin: 40px auto;
+	}
+
+	.news-title {
+		font-size: 36px;
 	}
 }
 
@@ -1819,6 +1892,14 @@ svg,
 
 @media (max-width:768px) {
 
+	.shop-title .title-stroke {
+		top: 5%;
+	}
+
+	.shop-title .title-color {
+		top: 11%;
+	}
+
 	.shop-title span {
 		font-size: 80px;
 	}
@@ -1829,6 +1910,7 @@ svg,
 	}
 
 	.bubble-1 {
+		top: 20%;
 		left: 15%;
 	}
 
@@ -1854,7 +1936,8 @@ svg,
 	.bubble-5 {
 		top: 90%;
 		left: 62%;
-
+		width: 220px;
+		height: 220px;
 	}
 
 	.bubble-6 {
@@ -1869,6 +1952,27 @@ svg,
 
 	.shop-name-item {
 		font-size: .8rem;
+	}
+}
+
+@media (max-width: 414px) {
+	.shop-title span {
+		font-size: 50px;
+	}
+
+	.bubbles {
+		width: 160px;
+		height: 160px;
+	}
+
+	.bubble-3 {
+		width: 200px;
+		height: 200px;
+	}
+
+	.bubble-4 {
+		width: 200px;
+		height: 200px;
 	}
 }
 
@@ -2191,7 +2295,7 @@ svg,
 
 	.customers-title h2 {
 		font-size: 50px;
-		padding: 2.5rem;
+		padding: 0 2.5rem;
 	}
 
 	.customers-left {
@@ -2234,6 +2338,18 @@ svg,
 		to {
 			transform: translateX(-200%);
 		}
+	}
+}
+
+@media (max-width: 414px) {
+	.customers-title h2 {
+		font-size: 36px;
+		padding-top: 1rem;
+	}
+
+	.customers-item {
+		height: auto;
+		padding: 15px 25px;
 	}
 }
 
@@ -2359,9 +2475,13 @@ svg,
 
 
 @media (max-width: 768px) {
+	#faq {
+		min-height: auto;
+	}
 
 	.faq-list li {
 		min-width: 325px;
+		padding: 15px 25px;
 	}
 
 	.faq-list {
@@ -2370,10 +2490,6 @@ svg,
 
 	.faq-title {
 		font-size: 50px;
-	}
-
-	.faq-list li {
-		padding: 15px 25px;
 	}
 
 	.faq-header {
@@ -2399,6 +2515,56 @@ svg,
 
 	.faq-text {
 		padding-left: 3rem;
+	}
+}
+
+@media (max-width: 414px) {
+
+
+	.faq-box {
+		margin-top: 2.5rem;
+	}
+
+	.faq-title {
+		font-size: 36px;
+		margin-bottom: 2.5rem;
+	}
+
+	.faq-list li {
+		min-width: 250px;
+		padding: 10px 15px;
+		margin-bottom: 20px;
+	}
+
+	.faq-header {
+		align-items: flex-start;
+		font-size: 14px;
+	}
+
+	.faq-list .faq-header::before {
+		margin-right: 8px;
+		font-size: 14px;
+		line-height: 1.5rem;
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+
+	.faq-list .faq-header::after {
+		align-self: flex-start;
+	}
+
+	.faq-text {
+		margin-top: 1rem;
+		font-size: 14px;
+		padding-left: 2rem;
+	}
+
+	.faq-text::before {
+		font-size: 14px;
+		line-height: 1.5rem;
+		width: 1.5rem;
+		height: 1.5rem;
+		margin-right: 8px;
 	}
 }
 
@@ -2485,12 +2651,29 @@ svg,
 	.shop-logo-bottom a {
 		width: 120px;
 		height: 120px;
+		margin: 0 15px;
 	}
 
 	.shop-logo,
 	.shop-logo2 {
 		margin: 20px;
 	}
+}
+
+@media (max-width: 414px) {
+
+	.shop-logo-top a,
+	.shop-logo-bottom a {
+		width: 100px;
+		height: 100px;
+		margin: 0 10px;
+	}
+
+	.shop-logo,
+	.shop-logo2 {
+		margin: 10px;
+	}
+
 }
 
 /* 表單 */
@@ -2550,6 +2733,7 @@ section.contact {
 
 	.contact-title {
 		font-size: 50px;
+		margin: 2.5rem auto 4rem;
 	}
 
 	.row-name-phone {
@@ -2558,6 +2742,15 @@ section.contact {
 
 	.row-name-phone .form-row {
 		width: 100%;
+	}
+}
+
+@media (max-width: 414px) {
+
+	.contact-title {
+		font-size: 36px;
+		margin-top: 0;
+		margin-bottom: 2.5rem;
 	}
 }
 
@@ -2659,6 +2852,20 @@ textarea:hover,
 	opacity: 0;
 }
 
+#newsletter.valid #newsletterInput {
+	border-bottom: 1.5px solid #FFBE17;
+}
+
+#newsletterMsg {
+	display: block;
+	visibility: hidden;
+	color: #000;
+	font-size: 12px;
+	font-weight: 300;
+	font-style: italic;
+	padding: 4px;
+}
+
 .check-box svg {
 	position: absolute;
 	top: 50%;
@@ -2677,6 +2884,53 @@ svg path {
 .submitButton-active .check-box {
 	animation: moveRight 3s ease-in-out forwards;
 	transition: 1s;
+}
+
+.modal-container {
+	/* position: relative; */
+	position: absolute;
+	/* inset: 0; */
+	/* height: 100%; */
+	width: 100%;
+	top: calc(100%);
+	visibility: hidden;
+	z-index: 101;
+}
+
+.footer-top-right-3 .newsletter-modal {
+	color: #fff;
+	position: relative;
+	background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+	width: 100%;
+	padding: 3px;
+	border-radius: 6px;
+	inset: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 14px;
+	line-height: 2rem;
+	letter-spacing: 0.5px;
+	word-spacing: 3px;
+	text-align: center;
+	animation: 3s drop ease-in-out;
+}
+
+.footer-top-right span.x {
+	position: absolute;
+	inset: 0% 2% auto auto;
+	cursor: pointer;
+	font-size: 1rem;
+	color: #fff;
+}
+
+@keyframes drop {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 100%;
+	}
 }
 
 @keyframes moveRight {
@@ -2971,9 +3225,15 @@ svg path {
 	}
 }
 
+@media (max-width: 414px) {
+	.footer-bottom span {
+		letter-spacing: 0;
+	}
+}
+
 #top {
 	position: fixed;
-	right: 5%;
+	right: 2.5%;
 	bottom: 8%;
 	z-index: 100;
 	width: 60px;
