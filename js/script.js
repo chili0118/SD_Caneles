@@ -90,7 +90,7 @@ iconsArea.addEventListener("mouseover", (event) => {
   let bouncingTexts = target.closest(".icons").children[3].children[0].innerHTML;
   let wrapText = ""
   for (let i = 0; i < bouncingTexts.length; i++) {
-    wrapText += "<em class='bounce-text'>" + bouncingTexts.charAt(i) + "</em>";
+    wrapText += "<em class=''>" + bouncingTexts.charAt(i) + "</em>";
   }
   
   target.closest(".icons").children[3].children[0].innerHTML= wrapText;
@@ -98,14 +98,16 @@ iconsArea.addEventListener("mouseover", (event) => {
   let j = 0;
   
   function applyBounce( ) {
-    if (letters[j] !== undefined) {
-    setTimeout(function () {
-      letters[j].className = "bounce-text";
-      j++;
-      if (j < letters.length) {
-        applyBounce();
+    if (letters[j] !== undefined && letters[j] !== null) {
+      if(letters[j]) {
+        setTimeout(function () {
+          letters[j].classList.add('bounce-text')
+          j++;
+          if (j < letters.length) {
+            applyBounce();
+          }
+        }, 250);
       }
-    }, 250);
     }
   }
   applyBounce( )
