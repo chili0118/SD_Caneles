@@ -235,6 +235,7 @@ body::-webkit-scrollbar-track {
 	top: 55px;
 	right: 80px;
 	-webkit-appearance: none;
+	appearance: none;
 	outline: none;
 }
 
