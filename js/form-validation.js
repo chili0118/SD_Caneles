@@ -105,6 +105,7 @@ function validationNewsletter() {
         newsletterMsg.style.visibility = "visible";
         newsletterMsg.innerHTML = "Please enter valid Email Address";
         newsletterMsg.style.color = "#ff0000";
+        popBtn.style.visibility = "hidden";
     }
 
     if (newsletterInput === "") {
@@ -119,15 +120,20 @@ function validationNewsletter() {
         modalContainer.style.visibility = "visible";
         newsletterMsg.style.visibility = "hidden";
         event.preventDefault()
+        document.querySelector('#newsletter').value=""
     }
     X.addEventListener("click", disappearX);
     function disappearX() {
-        modalContainer.style.visibility = "hidden";
+        if (newsletterInput.match(pattern)) {
+            modalContainer.style.visibility = "hidden";
+        }
     }
     modalContainer.addEventListener("click", disappearModalContainer)
     function disappearModalContainer(e) {
-        if (e.target.className === "modal-container") {
-            modalContainer.style.visibility = "hidden";
+        if (newsletterInput.match(pattern)) {
+            if (e.target.className === "modal-container") {
+                modalContainer.style.visibility = "hidden";
+            }
         }
     }
 }
