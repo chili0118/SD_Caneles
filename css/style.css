@@ -173,6 +173,42 @@ body::-webkit-scrollbar-track {
 	background: #170907;
 }
 
+.loading {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background-image: url(../images/body-bg.jpg);
+	background-size: cover;
+	margin: 0 auto;
+	pointer-events: none;
+	z-index: 1002;
+	transition: opacity 1s;
+}
+
+.loading .load-circle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 10px;
+	height: 5px;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	transition: width 2s ease;
+}
+
+.loading .percentage {
+	position: absolute;
+	/* 設置百分比元素為絕對定位 */
+	top: 45%;
+	/* 將百分比元素置中 */
+	left: 50%;
+	transform: translate(-50%, -50%);
+	/* 使百分比元素完全置中 */
+	font-size: 24px;
+	font-weight: bold;
+	color: #fff;
+}
+
 
 /* 頁首 */
 .header-box {
@@ -234,8 +270,8 @@ body::-webkit-scrollbar-track {
 	z-index: 1000;
 	top: 55px;
 	right: 80px;
-	-webkit-appearance: none;
 	appearance: none;
+	-webkit-appearance: none;
 	outline: none;
 }
 
@@ -524,6 +560,36 @@ body::-webkit-scrollbar-track {
 	}
 }
 
+.video-source {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	color: #fff;
+	opacity: .3;
+	font-size: 12px;
+	letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+	.video-source {
+		font-size: 10px;
+		letter-spacing: 0px;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		text-align: right;
+	}
+
+	.video-source span {
+		display: block;
+		width: 100%;
+		line-height: 1.2;
+	}
+	
+}
+
+
 /* about */
 section#about {
 	position: relative;
@@ -719,6 +785,7 @@ h2.about-page-two-h2 {
 	display: flex;
 	bottom: 30px;
 	left: 50%;
+	opacity: .75;
 	transform: translateX(-50%);
 }
 
@@ -2902,7 +2969,7 @@ svg path {
 	color: #fff;
 	position: relative;
 	background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(8px);
+	backdrop-filter: blur(8px);
 	width: 100%;
 	padding: 3px;
 	border-radius: 6px;
@@ -3107,10 +3174,6 @@ svg path {
 	font-size: 0.5rem;
 }
 
-#newsletter.valid #newsletterInput {
-	border-bottom: 1.5px solid #FFBE17;
-}
-
 .footer-top-right-3 button {
 	background: transparent;
 	border: none;
@@ -3135,15 +3198,6 @@ svg path {
 	margin-right: 5px;
 }
 
-#newsletterMsg {
-	display: block;
-	visibility: hidden;
-  color: #000;
-  font-weight: 300;
-  font-style: italic;
-  padding: 4px;
-}
-
 .footer-bottom span,
 .footer-bottom a {
 	display: block;
@@ -3151,46 +3205,6 @@ svg path {
 	font-size: 0.5rem;
 	text-decoration: none;
 	letter-spacing: 1px;
-}
-
-.modal-container {
-    position: relative;
-    inset: 0;
-    height: 100%;
-    width: 100%;
-    visibility: hidden;
-}
-
-.footer-top-right-3  .newsletter-modal {
-	color: #FFBE17;
-		position: relative;
-    background: rgba(255, 255, 255, 0.2);
-    width: 100%;
-    padding: 3px;
-    border-radius: 6px;
-		inset: 50%;
-    transform: translate(-50%, -50%);
-    font-size: large;
-    line-height: 2rem;
-    letter-spacing: 0.5px;
-    word-spacing: 5px;
-		text-align: center;
-		animation: 10s drop ease-in-out; 
-}
-.x {
-    position: absolute;
-    inset: 4% 4% auto auto;
-    font-size: 2.5rem;
-    cursor: pointer;
-}
-
-@keyframes drop {
-    0% {
-        left: -100%;
-		}
-    100% {
-        left: 50%;
-    }
 }
 
 .footer-bottom-right {
