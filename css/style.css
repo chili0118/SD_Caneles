@@ -235,6 +235,7 @@ body::-webkit-scrollbar-track {
 	top: 55px;
 	right: 80px;
 	-webkit-appearance: none;
+	appearance: none;
 	outline: none;
 }
 
@@ -3106,6 +3107,10 @@ svg path {
 	font-size: 0.5rem;
 }
 
+#newsletter.valid #newsletterInput {
+	border-bottom: 1.5px solid #FFBE17;
+}
+
 .footer-top-right-3 button {
 	background: transparent;
 	border: none;
@@ -3130,6 +3135,15 @@ svg path {
 	margin-right: 5px;
 }
 
+#newsletterMsg {
+	display: block;
+	visibility: hidden;
+  color: #000;
+  font-weight: 300;
+  font-style: italic;
+  padding: 4px;
+}
+
 .footer-bottom span,
 .footer-bottom a {
 	display: block;
@@ -3137,6 +3151,46 @@ svg path {
 	font-size: 0.5rem;
 	text-decoration: none;
 	letter-spacing: 1px;
+}
+
+.modal-container {
+    position: relative;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+}
+
+.footer-top-right-3  .newsletter-modal {
+	color: #FFBE17;
+		position: relative;
+    background: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    padding: 3px;
+    border-radius: 6px;
+		inset: 50%;
+    transform: translate(-50%, -50%);
+    font-size: large;
+    line-height: 2rem;
+    letter-spacing: 0.5px;
+    word-spacing: 5px;
+		text-align: center;
+		animation: 10s drop ease-in-out; 
+}
+.x {
+    position: absolute;
+    inset: 4% 4% auto auto;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+@keyframes drop {
+    0% {
+        left: -100%;
+		}
+    100% {
+        left: 50%;
+    }
 }
 
 .footer-bottom-right {

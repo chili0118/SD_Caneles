@@ -115,18 +115,19 @@ function validationNewsletter() {
 
     popBtn.addEventListener("click", appear);
 
-    function appear() {
+    function appear(event) {
         modalContainer.style.visibility = "visible";
         newsletterMsg.style.visibility = "hidden";
+        event.preventDefault()
     }
     X.addEventListener("click", disappearX);
     function disappearX() {
-        modalContainer.style.display = "none";
+        modalContainer.style.visibility = "hidden";
     }
     modalContainer.addEventListener("click", disappearModalContainer)
     function disappearModalContainer(e) {
         if (e.target.className === "modal-container") {
-            modalContainer.style.display = "none";
+            modalContainer.style.visibility = "hidden";
         }
     }
 }

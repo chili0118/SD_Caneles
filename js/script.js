@@ -90,22 +90,22 @@ iconsArea.addEventListener("mouseover", (event) => {
   let bouncingTexts = target.closest(".icons").children[3].children[0].innerHTML;
   let wrapText = ""
   for (let i = 0; i < bouncingTexts.length; i++) {
-    wrapText += "<em>" + bouncingTexts.charAt(i) + "</em>";
+    wrapText += "<em class=''>" + bouncingTexts.charAt(i) + "</em>";
   }
   
   target.closest(".icons").children[3].children[0].innerHTML= wrapText;
-  let letters = document.getElementsByTagName("em");
+  let letters = Array.from(document.getElementsByTagName("em"));
   let j = 0;
   
   function applyBounce( ) {
-    if (letters[j] !== undefined) {
-    setTimeout(function () {
-      letters[j].classList = "bounce-text";
-      j++;
-      if (j < letters.length) {
-        applyBounce();
-      }
-    }, 250);
+    if (j < letters.length) {
+      setTimeout(function () {
+        letters[j].classList.add('bounce-text')
+        j++;
+        if (j < letters.length) {
+          applyBounce();
+        }
+      }, 250);
     }
   }
   applyBounce( )
