@@ -34,7 +34,6 @@ function validTel(input) {
     const regexTel = /^[\+]?[(]?[0]{1}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{3}$/im
     if (regexTel.test(input.value.trim())) {
         setSuccess(input)
-        console.log(regex.test(input.value.trim()))
     } else {
         setError(input, 'Phone number is not valid');
     }
