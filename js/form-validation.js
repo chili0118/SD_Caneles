@@ -48,6 +48,13 @@ function validEmail(input) {
         setError(input, 'Email is not invalid');
     }
 }
+function validMessage(input) {
+    if (userMessage.value.trim()) {
+        setSuccess(input);
+    } else {
+    setError(input, "Message can't be blank");
+    }
+}
 
 //checkRequired fields //!!!IMPORTANT
 function checkRequired(inputArr) {
