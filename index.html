@@ -1124,7 +1124,7 @@
                                 <div class="form-row w-100">
                                     <label for="userName">姓名：</label>
                                     <div class="validation-container">
-                                        <input id="userName" name="name" autocomplete="off" type="text"
+                                        <input id="userName" name="name" autocomplete="off" oninput="validName(userName)" type="text"
                                             class="w-100 input-field" placeholder="Gingy" />
                                         <small class="validation">Error Message</small>
                                     </div>
@@ -1132,7 +1132,7 @@
                                 <div class="form-row w-100">
                                     <label for="userPhone">電話：</label>
                                     <div class="validation-container">
-                                        <input id="userPhone" name="tel" autocomplete="off" type="tel"
+                                        <input id="userPhone" name="tel" autocomplete="off" oninput="validTel(userPhone)" type="tel"
                                             class="w-100 input-field" maxlength="10"
                                             placeholder="09xxxxxxxx / 02xxxxxxxx" />
                                         <small class="validation">Error Message</small>
@@ -1142,7 +1142,7 @@
                             <div class="form-row w-100">
                                 <label for="userEmail">信箱：</label>
                                 <div class="validation-container">
-                                    <input id="userEmail" name="email" autocomplete="off" type="email"
+                                    <input id="userEmail" name="email" autocomplete="off" oninput="validEmail(userEmail)" type="email"
                                         class="w-100 input-field" placeholder="abc@mail.com" />
                                     <small class="validation">Error Message</small>
                                 </div>
@@ -1150,7 +1150,7 @@
                             <div class="form-row w-100">
                                 <label for="userMessage">留言：</label>
                                 <div class="validation-container">
-                                    <textarea id="userMessage" name="message" autocomplete="off"
+                                    <textarea id="userMessage" name="message" autocomplete="off" oninput="validMessage(userMessage)"
                                         class="w-100 scrollbar input-field" rows="3"
                                         placeholder="Type Messages Here"></textarea>
                                     <small class="validation">Error Message</small>

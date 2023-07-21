@@ -22,12 +22,20 @@ function setSuccess(input) {
     validationContainer.className = "validation-container success";
 }
 
+function validName(input) {
+    const regexName = /^[\u4e00-\u9fa5_a-zA-Z0-9]+$/
+    if (regexName.test(input.value.trim())) {
+        setSuccess(input);
+    } else {
+        setError(input, "Your name is not valid");
+    }
+}
+
 // check tel is valid
 function validTel(input) {
-    const regex = /^[\+]?[(]?[0]{1}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{3}$/im
-    if (regex.test(input.value.trim())) {
+    const regexTel = /^[\+]?[(]?[0]{1}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{3}$/im
+    if (regexTel.test(input.value.trim())) {
         setSuccess(input)
-        console.log(regex.test(input.value.trim()))
     } else {
         setError(input, 'Phone number is not valid');
     }
@@ -35,11 +43,19 @@ function validTel(input) {
 
 //check email is valid
 function validEmail(input) {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (re.test(input.value.trim())) {
+    const regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (regexEmail.test(input.value.trim())) {
         setSuccess(input)
     } else {
         setError(input, 'Email is not invalid');
+    }
+}
+
+function validMessage(input) {
+    if (userMessage.value.trim()) {
+        setSuccess(input);
+    } else {
+        setError(input, "Message can't be blank");
     }
 }
 
@@ -53,6 +69,7 @@ function checkRequired(inputArr) {
         }
     })
 }
+
 function validForm(inputArr) {
     let n = 0
     inputArr.forEach(function (input) {
@@ -77,6 +94,8 @@ function getFieldName(input) {
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     checkRequired([userName, userPhone, userEmail, userMessage]);
+    validName(userName)
+    validTel(userPhone);
     validEmail(userEmail);
     validForm([userName, userPhone, userEmail, userMessage])
 });
@@ -96,7 +115,7 @@ function validationNewsletter() {
         newsletterForm.classList.add("valid");
         newsletterForm.classList.remove("invalid");
         newsletterMsg.style.visibility = "visible";
-        newsletterMsg.innerHTML = "Your Email Address in valid &#10003;";
+        newsletterMsg.innerHTML = "Your Email Address is valid &#10003;";
         newsletterMsg.style.color = "#00ff00";
         popBtn.style.visibility = "visible";
     } else {
@@ -105,6 +124,7 @@ function validationNewsletter() {
         newsletterMsg.style.visibility = "visible";
         newsletterMsg.innerHTML = "Please enter valid Email Address";
         newsletterMsg.style.color = "#ff0000";
+        popBtn.style.visibility = "hidden";
     }
 
     if (newsletterInput === "") {
@@ -119,15 +139,22 @@ function validationNewsletter() {
         modalContainer.style.visibility = "visible";
         newsletterMsg.style.visibility = "hidden";
         event.preventDefault()
+        document.querySelector('#newsletter').value = ""
     }
+
     X.addEventListener("click", disappearX);
     function disappearX() {
-        modalContainer.style.visibility = "hidden";
+        if (newsletterInput.match(pattern)) {
+            modalContainer.style.visibility = "hidden";
+        }
     }
+
     modalContainer.addEventListener("click", disappearModalContainer)
     function disappearModalContainer(e) {
-        if (e.target.className === "modal-container") {
-            modalContainer.style.visibility = "hidden";
+        if (newsletterInput.match(pattern)) {
+            if (e.target.className === "modal-container") {
+                modalContainer.style.visibility = "hidden";
+            }
         }
     }
 }
