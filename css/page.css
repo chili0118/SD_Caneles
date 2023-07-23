@@ -939,3 +939,6 @@
     color: #170907;
     font-weight: 600;
 }
+#newsletter-label {
+    display: inline;
+}
