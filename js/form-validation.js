@@ -102,7 +102,6 @@ function validationNewsletter() {
     const newsletterInput = document.querySelector('#newsletter').value.trim()
     const newsletterMsg = document.querySelector("#newsletterMsg");
     const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-
     const modalContainer = document.querySelector(".modal-container")
     const popBtn = document.querySelector(".pop-btn")
     const X = document.querySelector(".x")
@@ -128,19 +127,20 @@ function validationNewsletter() {
     }
     function validateMailPattern() {
         const newsletterSpace = document.querySelector('#newsletter')
-        
         if (newsletterInput === "") {
             newsletterForm.classList.remove("valid");
             newsletterForm.classList.remove("invalid");
             newsletterMsg.innerHTML = "";
             modalContainer.style.visibility = "hidden";
+            
             newsletterSpace.addEventListener("keypress", function(event) {
                 if(event.keyCode === 13) { 
                     event.preventDefault()
+                    return 
                 }
             })
+            
         } else if (newsletterInput.match(pattern)) {
-            if (newsletterInput === "") { return}
             newsletterForm.classList.add("valid");
             newsletterForm.classList.remove("invalid");
             newsletterMsg.style.visibility = "visible";
