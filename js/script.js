@@ -165,7 +165,7 @@ const shops = [
   },
 ];
 
-let bubblesShops = document.querySelector('.bubbles-shops');
+const bubblesShops = document.querySelector('.bubbles-shops');
 
 function shopsImages(shops) {
   let htmlContent = ``;
@@ -188,10 +188,10 @@ function shopsImages(shops) {
         </g>
       </svg>
       <div class="bubble-img-container">
-        <img src="${shops[i].img}">
+        <img src="${shops[i].img}" alt="shop image">
         <div class="shop-info-container">
           <div class="shop-logo-container">
-            <img src="${shops[i].logo}" alt="shop-logo">
+            <img src="${shops[i].logo}" alt="shop logo">
           </div>
           <h3 class="shop-name-item">${shops[i].shopName}</h3>
         </div>
@@ -201,8 +201,81 @@ function shopsImages(shops) {
   }
   return htmlContent;
 }
-
 bubblesShops.innerHTML = shopsImages(shops);
+
+//店家logo區 
+
+const logos = [
+  {
+    title: 'shop logo 1',
+    logo: './images/dessert_logo-01.png',
+  },
+  {
+    title: 'shop logo 2',
+    logo: './images/dessert_logo-02.png',
+  },
+  {
+    title: 'shop logo 3',
+    logo: './images/dessert_logo-03.png',
+  },
+  {
+    title: 'shop logo 4',
+    logo: './images/dessert_logo-04.png',
+  },
+  {
+    title: 'shop logo 5',
+    logo: './images/dessert_logo-05.png',
+  },
+  {
+    title: 'shop logo 6',
+    logo: './images/dessert_logo-06.png',
+  },
+  {
+    title: 'shop logo 7',
+    logo: './images/dessert_logo-07.png',
+  },
+  {
+    title: 'shop logo 8',
+    logo: './images/dessert_logo-08.png',
+  },
+  {
+    title: 'shop logo 9',
+    logo: './images/dessert_logo-09.png',
+  },
+  {
+    title: 'shop logo 10',
+    logo: './images/dessert_logo-10.png',
+  },
+]
+const shopsLogo = document.querySelector('#shops_logo');
+
+function shopLogo(logos) {
+  let htmlContent = `<div class="shop-logo">`
+  for (let i = 0; i < 2; i++) {
+    let shopLogoTop = `<div class="shop-logo-top">`
+    for(let i = 0; i < logos.length-1; i++) {
+      shopLogoTop += 
+      `<a href="#"><img src="${logos[i].logo}" alt="${logos[i].title}"/></a>`
+    }
+    shopLogoTop += `</div>`
+    htmlContent += shopLogoTop
+  }
+  htmlContent += `</div> <div class="shop-logo2">`
+  
+  for (let i = 0; i < 2; i++) {
+    let shopLogoBottom = `<div class="shop-logo-bottom">`
+    for(let i = 0; i < logos.length-1; i++) {
+      shopLogoBottom += 
+      `<a href="#"><img src="${logos[i].logo}" alt="${logos[i].title}"/></a>`
+    }
+    shopLogoBottom += `</div>`
+    htmlContent += shopLogoBottom
+  }
+  
+  htmlContent += `</div>`
+  return htmlContent
+}
+shopsLogo.innerHTML = shopLogo(logos)
 
 $(function () {
   $(window).on("scroll", function () {
@@ -320,7 +393,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function openPopup() {
-  var popup = document.getElementById("popup");
+  let popup = document.getElementById("popup");
   document.body.style.overflow = "hidden";
   popup.style.display = "block";
 }
@@ -604,8 +677,3 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   }
 });
-
-
-
-
-
