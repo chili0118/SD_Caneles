@@ -2920,18 +2920,17 @@ textarea:hover,
 	opacity: 0;
 }
 
-#newsletter.valid #newsletterInput {
-	border-bottom: 1.5px solid #FFBE17;
-}
-
 #newsletterMsg {
+	position: absolute;
+	top:100%;
+	left: 0;
 	display: block;
 	visibility: hidden;
 	color: #000;
 	font-size: 12px;
 	font-weight: 300;
 	font-style: italic;
-	padding: 4px;
+	padding: 4px 4px 0 4px;
 }
 
 .check-box svg {
@@ -2941,46 +2940,17 @@ textarea:hover,
 	transform: translate(-50%, -50%);
 }
 
-svg path {
-	stroke-width: 2;
-	stroke: #fff;
-	stroke-dasharray: 34;
-	stroke-dashoffset: 34;
-	stroke-linecap: round;
-}
-
 .submitButton-active .check-box {
 	animation: moveRight 3s ease-in-out forwards;
 	transition: 1s;
 }
 
 .modal-container {
-	/* position: relative; */
 	position: absolute;
-	/* inset: 0; */
-	/* height: 100%; */
 	width: 100%;
 	top: calc(100%);
 	visibility: hidden;
 	z-index: 101;
-}
-
-.footer-top-right-3 .newsletter-modal {
-	color: #fff;
-	position: relative;
-	background: rgba(255, 255, 255, 0.25);
-	backdrop-filter: blur(8px);
-	width: 100%;
-	padding: 3px;
-	border-radius: 6px;
-	inset: 50%;
-	transform: translate(-50%, -50%);
-	font-size: 14px;
-	line-height: 2rem;
-	letter-spacing: 0.5px;
-	word-spacing: 3px;
-	text-align: center;
-	animation: 3s drop ease-in-out;
 }
 
 .footer-top-right span.x {
@@ -2989,16 +2959,6 @@ svg path {
 	cursor: pointer;
 	font-size: 1rem;
 	color: #fff;
-}
-
-@keyframes drop {
-	0% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 100%;
-	}
 }
 
 @keyframes moveRight {
@@ -3011,6 +2971,14 @@ svg path {
 		right: 1.5%;
 		opacity: 1;
 	}
+}
+
+svg path {
+	stroke-width: 2;
+	stroke: #fff;
+	stroke-dasharray: 34;
+	stroke-dashoffset: 34;
+	stroke-linecap: round;
 }
 
 @media (max-width: 768px) {
@@ -3139,7 +3107,7 @@ svg path {
 	flex-direction: column;
 }
 
-.footer-top-right div {
+.footer-top-right div, .footer-top-right form {
 	margin: 5px 0;
 }
 
@@ -3156,6 +3124,7 @@ svg path {
 
 .footer-top-right-3 {
 	position: relative;
+	height: 100%;
 }
 
 .footer-top-right-3 #newsletter {
