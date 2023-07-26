@@ -177,6 +177,7 @@ body::-webkit-scrollbar-track {
 	position: fixed;
 	width: 100%;
 	height: 100vh;
+	background: #170907;
 	background-image: url(../images/body-bg.webp);
 	background-size: cover;
 	margin: 0 auto;
