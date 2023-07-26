@@ -706,7 +706,7 @@ document.addEventListener('DOMContentLoaded', function () {
       e.preventDefault();
       const brandId = this.getAttribute('data-num');
       const brandData = homeShopsData.find(brand => brand.id == brandId);
-      const brandUrl = '../pages/shop.html?id=' + brandId;
+      const brandUrl = 'pages/shop.html?id=' + brandId;
 
       // 將資料存儲到 localStorage
       localStorage.setItem('currentShop', JSON.stringify(brandData));
@@ -716,7 +716,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
-
 
 
 
