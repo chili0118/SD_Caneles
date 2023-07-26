@@ -144,7 +144,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	/*設定文字的平滑效果*/
 	/* antialiased: 去除文字上的鋸齒狀，文字會看起來更輕一點，也是較推薦的優化方式  */
-	background-image: url(../images/body-bg.jpg);
+	background-image: url(../images/body-bg.webp);
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
@@ -177,7 +177,7 @@ body::-webkit-scrollbar-track {
 	position: fixed;
 	width: 100%;
 	height: 100vh;
-	background-image: url(../images/body-bg.jpg);
+	background-image: url(../images/body-bg.webp);
 	background-size: cover;
 	margin: 0 auto;
 	pointer-events: none;
@@ -342,7 +342,7 @@ body::-webkit-scrollbar-track {
 	width: 100%;
 	background-size: cover;
 	background-position: center;
-	background-image: url(../images/banner-5.jpg);
+	background-image: url(../images/banner-5.webp);
 	filter: sepia(150%) grayscale(50%) brightness(20%);
 	transition: .3s linear;
 	z-index: -1;
@@ -353,15 +353,15 @@ body::-webkit-scrollbar-track {
 }
 
 #menu a:hover:nth-child(3)~.menu-img {
-	background-image: url("../images/banner-2.jpg");
+	background-image: url("../images/banner-2.webp");
 }
 
 #menu a:hover:nth-child(4)~.menu-img {
-	background-image: url("../images/menu-4.jpg");
+	background-image: url("../images/menu-4.webp");
 }
 
 #menu a:hover:nth-child(5)~.menu-img {
-	background-image: url("../images/menu-5.jpg");
+	background-image: url("../images/menu-5.webp");
 }
 
 @media (max-width: 768px) {
@@ -504,7 +504,7 @@ body::-webkit-scrollbar-track {
 	content: '';
 	display: block;
 	position: absolute;
-	background-image: url(../images/Canelés.png);
+	background-image: url(../images/caneles.webp);
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -639,7 +639,7 @@ section#about {
 .contents-one {
 	position: relative;
 	height: 100%;
-	background-image: url("../images/contents-one-bg.png");
+	background-image: url("../images/contents-one-bg.webp");
 }
 
 .about-page-one {
@@ -745,7 +745,7 @@ section#about {
 .contents-two {
 	position: relative;
 	height: 100%;
-	background-image: url("../images/contents-two-bg.png");
+	background-image: url("../images/contents-two-bg.webp");
 }
 
 .about-page-two {
@@ -962,23 +962,23 @@ h2.about-page-two-h2 {
 }
 
 .icon1 .button_border:hover .border_in .bg_focus {
-	background-image: url("../images/Vanilla.png");
+	background-image: url("../images/Vanilla.webp");
 }
 
 .icon2 .button_border:hover .border_in .bg_focus {
-	background-image: url("../images/egg.png");
+	background-image: url("../images/egg.webp");
 }
 
 .icon3 .button_border:hover .border_in .bg_focus {
-	background-image: url("../images/flour.png");
+	background-image: url("../images/flour.webp");
 }
 
 .icon4 .button_border:hover .border_in .bg_focus {
-	background-image: url("../images/rum.png");
+	background-image: url("../images/rum.webp");
 }
 
 .icon5 .button_border:hover .border_in .bg_focus {
-	background-image: url("../images/milk.png");
+	background-image: url("../images/milk.webp");
 }
 
 .button_border:hover .border_in span {
@@ -1001,7 +1001,7 @@ h2.about-page-two-h2 {
 }
 
 .icon4.firstView .button_border .border_in .bg_focus {
-	background-image: url("../images/rum.png");
+	background-image: url("../images/rum.webp");
 }
 
 .icon4.firstView .button_border .border_in {
@@ -1041,26 +1041,26 @@ h2.about-page-two-h2 {
 }
 
 .icon1 span {
-	background-image: url("../images/icon-vanilla.png");
+	background-image: url("../images/icon-vanilla.svg");
 }
 
 .icon2 span {
-	background-image: url("../images/icon-egg.png");
+	background-image: url("../images/icon-egg.svg");
 }
 
 /* 3 flour  */
 .icon3 span {
-	background-image: url("../images/icon-flour.png");
+	background-image: url("../images/icon-flour.svg");
 }
 
 /* 4 rum */
 .icon4 span {
-	background-image: url("../images/icon-rum.png");
+	background-image: url("../images/icon-rum.svg");
 }
 
 /*milk*/
 .icon5 span {
-	background-image: url("../images/icon-milk.png");
+	background-image: url("../images/icon-milk.svg");
 }
 
 .button_border,
@@ -1480,27 +1480,27 @@ p em {
 }
 
 .news-card1 {
-	background-image: url(../images/news-img1.jpg);
+	background-image: url(../images/news-img1.webp);
 	grid-area: card1;
 }
 
 .news-card2 {
-	background-image: url(../images/news-img2.jpg);
+	background-image: url(../images/news-img2.webp);
 	grid-area: card2;
 }
 
 .news-card3 {
-	background-image: url(../images/news-img3.jpg);
+	background-image: url(../images/news-img3.webp);
 	grid-area: card3;
 }
 
 .news-card4 {
-	background-image: url(../images/news-img4.jpg);
+	background-image: url(../images/news-img4.webp);
 	grid-area: card4;
 }
 
 .news-card5 {
-	background-image: url(../images/news-img5.jpg);
+	background-image: url(../images/news-img5.webp);
 	grid-area: card5;
 }
 
@@ -2081,7 +2081,7 @@ svg,
 #customers {
 	width: 100%;
 	height: 100vh;
-	background-image: url(../images/bg-customers.jpg);
+	background-image: url(../images/bg-customers.webp);
 	display: flex;
 	justify-content: space-around;
 	background-repeat: no-repeat;
@@ -2746,7 +2746,7 @@ svg,
 
 /* 表單 */
 .page-bottom-bg {
-	background-image: url(../images/form-bg.png);
+	background-image: url(../images/form-bg.webp);
 	background-position: center center;
 	width: 100%;
 	height: 100%;
@@ -3157,6 +3157,25 @@ svg path {
 .footer-top-right-3 button img {
 	width: 20px;
 	height: 20px;
+}
+
+.footer-top-right-3  .newsletter-modal {
+	color: #fff;
+	position: absolute;
+	background: rgba(255, 255, 255, .2);
+	width: 100%;
+	height: 2.2rem;
+	padding: 3px;
+	border-radius: 6px;
+	inset: 50%;
+	transform: translate(-50%, -50%);
+	top: 10px;
+	font-size: 16px;
+	line-height: 2rem;
+	letter-spacing: 0.5px;
+	word-spacing: 5px;
+	text-align: center;
+	
 }
 
 .icon-mail {

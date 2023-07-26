@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', function () {
     for (let i = 0; i < shopData.product.length; i++) {
         let products = document.createElement('li');
         products.innerHTML = `
-        <div class="shop-product-list-img"><img src="../images/product.png" alt=""></div>
+        <div class="shop-product-list-img"><img src="../images/product.png" alt="產品照"></div>
         <div class="shop-product-list-content">
             <h5>${shopData.product[i].productName}</h5>
             <p>${shopData.product[i].price}</p>

@@ -5,7 +5,7 @@
     width: 100%;
     height: 30vh;
     margin-top: 150px;
-    background-image: url(../images/form-bg.png);
+    background-image: url(../images/form-bg.webp);
     background-position: center;
     position: relative;
 }
@@ -623,7 +623,7 @@
     background-position: center;
     width: 150px;
     height: 150px;
-    background-image: url(../images/dessert_logo-01.png);
+    background-image: url(../images/dessert_logo-01.webp);
     background-size: cover;
 }
 
@@ -638,7 +638,7 @@
     background-position: center;
     width: 150px;
     height: 150px;
-    background-image: url(../images/dessert_logo-02.png);
+    background-image: url(../images/dessert_logo-02.webp);
     background-size: cover;
 }
 
@@ -653,7 +653,7 @@
     background-position: center;
     width: 150px;
     height: 150px;
-    background-image: url(../images/dessert_logo-03.png);
+    background-image: url(../images/dessert_logo-03.webp);
     background-size: cover;
 }
 
@@ -668,7 +668,7 @@
     background-position: center;
     width: 150px;
     height: 150px;
-    background-image: url(../images/dessert_logo-04.png);
+    background-image: url(../images/dessert_logo-04.webp);
     background-size: cover;
 }
 
@@ -683,7 +683,7 @@
     background-position: center;
     width: 150px;
     height: 150px;
-    background-image: url(../images/dessert_logo-05.png);
+    background-image: url(../images/dessert_logo-05.webp);
     background-size: cover;
 }
 
@@ -698,7 +698,7 @@
     background-position: center;
     width: 150px;
     height: 150px;
-    background-image: url(../images/dessert_logo-06.png);
+    background-image: url(../images/dessert_logo-06.webp);
     background-size: cover;
 }
 
@@ -713,7 +713,7 @@
     background-position: center;
     width: 150px;
     height: 150px;
-    background-image: url(../images/dessert_logo-07.png);
+    background-image: url(../images/dessert_logo-07.webp);
     background-size: cover;
 }
 
@@ -728,7 +728,7 @@
     background-position: center;
     width: 150px;
     height: 150px;
-    background-image: url(../images/dessert_logo-08.png);
+    background-image: url(../images/dessert_logo-08.webp);
     background-size: cover;
 }
 
@@ -743,7 +743,7 @@
     background-position: center;
     width: 150px;
     height: 150px;
-    background-image: url(../images/dessert_logo-09.png);
+    background-image: url(../images/dessert_logo-09.webp);
     background-size: cover;
 }
 
@@ -758,7 +758,7 @@
     background-position: center;
     width: 150px;
     height: 150px;
-    background-image: url(../images/dessert_logo-10.png);
+    background-image: url(../images/dessert_logo-10.webp);
     background-size: cover;
 }
 
@@ -942,4 +942,8 @@
 
 #newsletter-label {
     display: inline;
+}
+
+.footer-top-right-3 button {
+    top: 11px;
 }

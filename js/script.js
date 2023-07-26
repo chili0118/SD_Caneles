@@ -168,38 +168,38 @@ const shops = [
   {
     title: 'bubble-1',
     shopName: 'Flower Dessert',
-    img: './images/shops-1.jpg',
-    logo: './images/dessert_logo-01.png',
+    img: './images/shops-1.webp',
+    logo: './images/dessert_logo-01.webp',
   },
   {
     title: 'bubble-2',
     shopName: '鑽品咖啡館',
-    img: './images/shops-2.jpg',
-    logo: './images/dessert_logo-02.png',
+    img: './images/shops-2.webp',
+    logo: './images/dessert_logo-02.webp',
   },
   {
     title: 'bubble-3',
     shopName: 'Happy Cake',
-    img: './images/shops-3.jpg',
-    logo: './images/dessert_logo-03.png',
+    img: './images/shops-3.webp',
+    logo: './images/dessert_logo-03.webp',
   },
   {
     title: 'bubble-4',
     shopName: 'MJ 甜品',
-    img: './images/shops-4.jpg',
-    logo: './images/dessert_logo-04.png',
+    img: './images/shops-4.webp',
+    logo: './images/dessert_logo-04.webp',
   },
   {
     title: 'bubble-5',
     shopName: '海點麵包坊',
-    img: './images/shops-5.jpg',
-    logo: './images/dessert_logo-05.png',
+    img: './images/shops-5.webp',
+    logo: './images/dessert_logo-05.webp',
   },
   {
     title: 'bubble-6',
     shopName: '蕾妮雅甜點實驗室',
-    img: './images/shops-6.jpg',
-    logo: './images/dessert_logo-06.png',
+    img: './images/shops-6.webp',
+    logo: './images/dessert_logo-06.webp',
   },
 ];
 
@@ -247,43 +247,43 @@ bubblesShops.innerHTML = shopsImages(shops);
 const logos = [
   {
     title: 'shop logo 1',
-    logo: './images/dessert_logo-01.png',
+    logo: './images/dessert_logo-01.webp',
   },
   {
     title: 'shop logo 2',
-    logo: './images/dessert_logo-02.png',
+    logo: './images/dessert_logo-02.webp',
   },
   {
     title: 'shop logo 3',
-    logo: './images/dessert_logo-03.png',
+    logo: './images/dessert_logo-03.webp',
   },
   {
     title: 'shop logo 4',
-    logo: './images/dessert_logo-04.png',
+    logo: './images/dessert_logo-04.webp',
   },
   {
     title: 'shop logo 5',
-    logo: './images/dessert_logo-05.png',
+    logo: './images/dessert_logo-05.webp',
   },
   {
     title: 'shop logo 6',
-    logo: './images/dessert_logo-06.png',
+    logo: './images/dessert_logo-06.webp',
   },
   {
     title: 'shop logo 7',
-    logo: './images/dessert_logo-07.png',
+    logo: './images/dessert_logo-07.webp',
   },
   {
     title: 'shop logo 8',
-    logo: './images/dessert_logo-08.png',
+    logo: './images/dessert_logo-08.webp',
   },
   {
     title: 'shop logo 9',
-    logo: './images/dessert_logo-09.png',
+    logo: './images/dessert_logo-09.webp',
   },
   {
     title: 'shop logo 10',
-    logo: './images/dessert_logo-10.png',
+    logo: './images/dessert_logo-10.webp',
   },
 ]
 const shopsLogo = document.querySelector('#shops_logo');
@@ -448,8 +448,8 @@ let homeShopsData = [
   {
     id: 0,
     brand: `Flower Dessert`,
-    bannerImg: `../images/shops-1.jpg`,
-    brandLogo: `../images/dessert_logo-01.png`,
+    bannerImg: `../images/shops-1.webp`,
+    brandLogo: `../images/dessert_logo-01.webp`,
     open: `09:00 - 17:00`,
     phone: `02-23928179`,
     add: `台北市大安區新生南路三段84號一樓`,
@@ -480,8 +480,8 @@ let homeShopsData = [
   {
     id: 1,
     brand: `鑽品咖啡館`,
-    bannerImg: `../images/shops-2.jpg`,
-    brandLogo: `../images/dessert_logo-02.png`,
+    bannerImg: `../images/shops-2.webp`,
+    brandLogo: `../images/dessert_logo-02.webp`,
     open: `10:00 - 18:00`,
     phone: `02-98765432`,
     add: `台北市大同區重慶北路200號`,
@@ -504,8 +504,8 @@ let homeShopsData = [
   {
     id: 2,
     brand: `Happy Cake`,
-    bannerImg: `../images/shops-3.jpg`,
-    brandLogo: `../images/dessert_logo-03.png`,
+    bannerImg: `../images/shops-3.webp`,
+    brandLogo: `../images/dessert_logo-03.webp`,
     open: `10:00 - 21:00`,
     phone: `02-34567890`,
     add: `台北市士林區天母西路300號`,
@@ -532,8 +532,8 @@ let homeShopsData = [
   {
     id: 3,
     brand: `MJ 甜品`,
-    bannerImg: `../images/shops-4.jpg`,
-    brandLogo: `../images/dessert_logo-04.png`,
+    bannerImg: `../images/shops-4.webp`,
+    brandLogo: `../images/dessert_logo-04.webp`,
     open: `08:30 - 16:30`,
     phone: `02-87654321`,
     add: `台北市大同區重慶北路200號`,
@@ -556,8 +556,8 @@ let homeShopsData = [
   {
     id: 4,
     brand: `海點麵包坊`,
-    bannerImg: `../images/shops-5.jpg`,
-    brandLogo: `../images/dessert_logo-05.png`,
+    bannerImg: `../images/shops-5.webp`,
+    brandLogo: `../images/dessert_logo-05.webp`,
     open: `13:00 - 20:30`,
     phone: `02-23456789`,
     add: `台北市松山區西寧南路500號`,
@@ -576,8 +576,8 @@ let homeShopsData = [
   {
     id: 5,
     brand: `蕾妮雅甜點實驗室`,
-    bannerImg: `../images/shops-6.jpg`,
-    brandLogo: `../images/dessert_logo-06.png`,
+    bannerImg: `../images/shops-6.webp`,
+    brandLogo: `../images/dessert_logo-06.webp`,
     open: `11:00 - 18:00`,
     phone: `02-76543210`,
     add: `台北市中正區瑞湖街600號`,
@@ -600,8 +600,8 @@ let homeShopsData = [
   {
     id: 6,
     brand: `MU MING`,
-    bannerImg: `../images/shops-7.jpg`,
-    brandLogo: `../images/dessert_logo-07.png`,
+    bannerImg: `../images/shops-7.webp`,
+    brandLogo: `../images/dessert_logo-07.webp`,
     open: `10:00 - 18:00`,
     phone: `02-45678901`,
     add: `台北市信義區基隆路700號`,
@@ -620,8 +620,8 @@ let homeShopsData = [
   {
     id: 7,
     brand: `熊貝貝`,
-    bannerImg: `../images/shops-8.jpg`,
-    brandLogo: `../images/dessert_logo-08.png`,
+    bannerImg: `../images/shops-8.webp`,
+    brandLogo: `../images/dessert_logo-08.webp`,
     open: `10:00 - 21:00`,
     phone: `02-65432109`,
     add: `台北市大安區忠孝東路800號`,
@@ -652,8 +652,8 @@ let homeShopsData = [
   {
     id: 8,
     brand: `御品甜點`,
-    bannerImg: `../images/shops-9.jpg`,
-    brandLogo: `../images/dessert_logo-09.png`,
+    bannerImg: `../images/shops-9.webp`,
+    brandLogo: `../images/dessert_logo-09.webp`,
     open: `11:00 - 20:00`,
     phone: `02-78905432`,
     add: `台北市大同區舊莊街900號`,
@@ -676,8 +676,8 @@ let homeShopsData = [
   {
     id: 9,
     brand: `Canelé`,
-    bannerImg: `../images/shops-10.jpg`,
-    brandLogo: `../images/dessert_logo-10.png`,
+    bannerImg: `../images/shops-10.webp`,
+    brandLogo: `../images/dessert_logo-10.webp`,
     open: `14:00 - 22:00`,
     phone: `02-32109876`,
     add: `台北市信義區木柵路1001號`,
