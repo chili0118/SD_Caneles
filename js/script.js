@@ -294,7 +294,7 @@ function shopLogo(logos) {
     let shopLogoTop = `<div class="shop-logo-top">`
     for (let i = 0; i < logos.length - 1; i++) {
       shopLogoTop +=
-        `<a href="#"><img src="${logos[i].logo}" alt="${logos[i].title}"/></a>`
+        `<a href="#" class="logo-link"><img src="${logos[i].logo}" alt="${logos[i].title}"/></a>`
     }
     shopLogoTop += `</div>`
     htmlContent += shopLogoTop
@@ -305,7 +305,7 @@ function shopLogo(logos) {
     let shopLogoBottom = `<div class="shop-logo-bottom">`
     for (let i = 0; i < logos.length - 1; i++) {
       shopLogoBottom +=
-        `<a href="#"><img src="${logos[i].logo}" alt="${logos[i].title}"/></a>`
+        `<a href="#" class="logo-link"><img src="${logos[i].logo}" alt="${logos[i].title}"/></a>`
     }
     shopLogoBottom += `</div>`
     htmlContent += shopLogoBottom
@@ -315,6 +315,15 @@ function shopLogo(logos) {
   return htmlContent
 }
 shopsLogo.innerHTML = shopLogo(logos)
+
+document.addEventListener('DOMContentLoaded', function() {
+  const logoLink = document.querySelectorAll('.logo-link');
+  logoLink.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+    })
+  })
+})
 
 $(function () {
   $(window).on("scroll", function () {
