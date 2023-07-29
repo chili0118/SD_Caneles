@@ -246,7 +246,7 @@ let homeShopsData = [
   // 01
   {
     id: 0,
-    title: 'shop logo 1',
+    title: `shop logo 1`,
     brand: `Flower Dessert`,
     img: `./images/dessert_logo-01.webp`,
     bannerImg: `../images/shops-1.webp`,
@@ -280,9 +280,9 @@ let homeShopsData = [
   // 02
   {
     id: 1,
-    title: 'shop logo 2',
+    title: `shop logo 2`,
     brand: `鑽品咖啡館`,
-    img: './images/dessert_logo-02.webp',
+    img: `./images/dessert_logo-02.webp`,
     bannerImg: `../images/shops-2.webp`,
     brandLogo: `../images/dessert_logo-02.webp`,
     open: `10:00 - 18:00`,
@@ -306,9 +306,9 @@ let homeShopsData = [
   // 03
   {
     id: 2,
-    title: 'shop logo 3',
+    title: `shop logo 3`,
     brand: `Happy Cake`,
-    img: './images/dessert_logo-03.webp',
+    img: `./images/dessert_logo-03.webp`,
     bannerImg: `../images/shops-3.webp`,
     brandLogo: `../images/dessert_logo-03.webp`,
     open: `10:00 - 21:00`,
@@ -336,9 +336,9 @@ let homeShopsData = [
   // 04
   {
     id: 3,
-    title: 'shop logo 4',
+    title: `shop logo 4`,
     brand: `MJ 甜品`,
-    img: './images/dessert_logo-04.webp',
+    img: `./images/dessert_logo-04.webp`,
     bannerImg: `../images/shops-4.webp`,
     brandLogo: `../images/dessert_logo-04.webp`,
     open: `08:30 - 16:30`,
@@ -362,9 +362,9 @@ let homeShopsData = [
   // 05
   {
     id: 4,
-    title: 'shop logo 5',
+    title: `shop logo 5`,
     brand: `海點麵包坊`,
-    img: './images/dessert_logo-05.webp',
+    img: `./images/dessert_logo-05.webp`,
     bannerImg: `../images/shops-5.webp`,
     brandLogo: `../images/dessert_logo-05.webp`,
     open: `13:00 - 20:30`,
@@ -384,9 +384,9 @@ let homeShopsData = [
   // 06
   {
     id: 5,
-    title: 'shop logo 6',
+    title: `shop logo 6`,
     brand: `蕾妮雅甜點實驗室`,
-    img: './images/dessert_logo-06.webp',
+    img: `./images/dessert_logo-06.webp`,
     bannerImg: `../images/shops-6.webp`,
     brandLogo: `../images/dessert_logo-06.webp`,
     open: `11:00 - 18:00`,
@@ -410,9 +410,9 @@ let homeShopsData = [
   // 07
   {
     id: 6,
-    title: 'shop logo 7',
+    title: `shop logo 7`,
     brand: `MU MING`,
-    img: './images/dessert_logo-07.webp',
+    img: `./images/dessert_logo-07.webp`,
     bannerImg: `../images/shops-7.webp`,
     brandLogo: `../images/dessert_logo-07.webp`,
     open: `10:00 - 18:00`,
@@ -432,9 +432,9 @@ let homeShopsData = [
   // 08
   {
     id: 7,
-    title: 'shop logo 8',
+    title: `shop logo 8`,
     brand: `熊貝貝`,
-    img: './images/dessert_logo-08.webp',
+    img: `./images/dessert_logo-08.webp`,
     bannerImg: `../images/shops-8.webp`,
     brandLogo: `../images/dessert_logo-08.webp`,
     open: `10:00 - 21:00`,
@@ -466,9 +466,9 @@ let homeShopsData = [
   // 09
   {
     id: 8,
-    title: 'shop logo 9',
+    title: `shop logo 9`,
     brand: `御品甜點`,
-    img: './images/dessert_logo-09.webp',
+    img: `./images/dessert_logo-09.webp`,
     bannerImg: `../images/shops-9.webp`,
     brandLogo: `../images/dessert_logo-09.webp`,
     open: `11:00 - 20:00`,
@@ -492,9 +492,9 @@ let homeShopsData = [
   // 10
   {
     id: 9,
-    title: 'shop logo 10',
+    title: `shop logo 10`,
     brand: `Canelé`,
-    img: './images/images/dessert_logo-10.webp',
+    img: `./images/images/dessert_logo-10.webp`,
     bannerImg: `../images/shops-10.webp`,
     brandLogo: `../images/dessert_logo-10.webp`,
     open: `14:00 - 22:00`,
