@@ -525,7 +525,7 @@ function shopLogo(homeShopsData) {
     let shopLogoTop = `<div class="shop-logo-top">`
     for (let j = 0; j < homeShopsData.length - 1; j++) {
       shopLogoTop +=
-        `<a href="#" class="logo-link"><img src="${homeShopsData[j].brandLogo}" alt="${homeShopsData[j].title}"/></a>`
+        `<a href="#" class="logo-link"><img src="${homeShopsData[j].img}" alt="${homeShopsData[j].title}"/></a>`
     }
     shopLogoTop += `</div>`
     htmlContent += shopLogoTop
