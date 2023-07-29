@@ -248,7 +248,7 @@ let homeShopsData = [
     id: 0,
     title: 'shop logo 1',
     brand: `Flower Dessert`,
-    img: './images/dessert_logo-01.webp',
+    img: `./images/dessert_logo-01.webp`,
     bannerImg: `../images/shops-1.webp`,
     brandLogo: `../images/dessert_logo-01.webp`,
     open: `09:00 - 17:00`,
@@ -536,7 +536,7 @@ function shopLogo(homeShopsData) {
     let shopLogoBottom = `<div class="shop-logo-bottom">`
     for (let j = 0; j < homeShopsData.length - 1; j++) {
       shopLogoBottom +=
-        `<a href="#" class="logo-link"><img src="${homeShopsData[j].brandLogo}" alt="${homeShopsData[j].title}"/></a>`
+        `<a href="#" class="logo-link"><img src="${homeShopsData[j].img}" alt="${homeShopsData[j].title}"/></a>`
     }
     shopLogoBottom += `</div>`
     htmlContent += shopLogoBottom
