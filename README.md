@@ -76,7 +76,7 @@ cd SD_Caneles
 
 ### Thanks for
 
-[Emily Kim (video: The French Canelé)] (https://vimeo.com/292542131)
+Emily Kim - [video: Making of: The French Canelé](https://vimeo.com/292542131)
 
 ### License
 
