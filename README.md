@@ -44,17 +44,18 @@ cd SD_Caneles
 - 由口味篩選產品
 
 ### 預覽
-|![](./assets/SD%20Canelés-about.png)|
-|:-------:|
-|![](./assets/SD%20Canelés-shops.gif)|
-|![](./assets/SD%20Canelés-map.png)|
-|![](./assets/SD%20Canelés-contact.gif)|
-|![](./assets/SD%20Canelés-email-subscription.gif)|
-|分頁|
-|![](./assets/SD%20Canelés-news.gif)|
-|![](./assets/SD%20Canelés-area-shops.gif)|
-|![](./assets/SD%20Canelés-product.gif)|
 
+|                       首頁                        |
+| :-----------------------------------------------: |
+|       ![](./assets/SD%20Canelés-about.png)        |
+|       ![](./assets/SD%20Canelés-shops.gif)        |
+|        ![](./assets/SD%20Canelés-map.png)         |
+|      ![](./assets/SD%20Canelés-contact.gif)       |
+| ![](./assets/SD%20Canelés-email-subscription.gif) |
+|                       分頁                        |
+|        ![](./assets/SD%20Canelés-news.gif)        |
+|     ![](./assets/SD%20Canelés-area-shops.gif)     |
+|      ![](./assets/SD%20Canelés-product.gif)       |
 
 ### 專案技術
 
@@ -75,6 +76,8 @@ cd SD_Caneles
 
 ### Thanks for
 
-Emily Kim (video: The French Canelé)
+[Emily Kim (video: The French Canelé)] (https://vimeo.com/292542131)
 
 ### License
+
+MIT
