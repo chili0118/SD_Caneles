@@ -50,6 +50,11 @@ cd SD_Caneles
 |![](./assets/SD%20Canelés-map.png)|
 |![](./assets/SD%20Canelés-contact.gif)|
 |![](./assets/SD%20Canelés-email-subscription.gif)|
+|分頁|
+|![](./assets/SD%20Canelés-news.gif)|
+|![](./assets/SD%20Canelés-area-shops.gif)|
+|![](./assets/SD%20Canelés-product.gif)|
+
 
 ### 專案技術
 
