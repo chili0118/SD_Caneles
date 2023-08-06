@@ -1,8 +1,9 @@
-# Search Dessert CanCanelés
+# Search Dessert Canelés
 
 ![Search-Dessert-Canelés-website cover](./assets/SD%20Canelés-banner.gif)
 
 Search Dessert Canelés 尋找可麗露
+
 平常喜愛由不同的資訊平台收集有販售可麗露的店家，有的是專賣店有的是麵包店或咖啡店。為了統整愛店們的資訊，我們使用 JavaScript 打造一個可麗露專屬平台，提供使用者各店家資訊，還能一覽各家創新口味。
 
 ### 立即瀏覽
