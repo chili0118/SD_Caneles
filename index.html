@@ -1156,9 +1156,115 @@
                             <a href="./pages/product.html">商品一覽</a>
                         </div>
                     </div>
+                  </div>
                 </div>
-            </footer>
-        </div>
+                <div class="form-row w-100">
+                  <label for="">信箱：</label>
+                  <div class="validation-container">
+                    <input
+                      id="userEmail"
+                      name="email"
+                      oninput="validEmail(userEmail)"
+                      autocomplete="off"
+                      type="email"
+                      class="w-100 input-field"
+                      placeholder="abc@mail.com"
+                    />
+                    <small class="validation">Error Message</small>
+                  </div>
+                </div>
+                <div class="form-row w-100">
+                  <label for="">留言：</label>
+                  <div class="validation-container">
+                    <textarea
+                      id="userMessage"
+                      name="message"
+                      autocomplete="off"
+                      oninput="validMessage(userMessage)"
+                      class="w-100 scrollbar input-field"
+                      rows="3"
+                      placeholder="Type Messages Here"
+                    ></textarea>
+                    <small class="validation">Error Message</small>
+                  </div>
+                </div>
+              </div>
+              <button
+                type="submit"
+                class="submit-button w-100"
+                id="submit-button"
+              >
+                <p id="btnText">Submit</p>
+                <div class="check-box">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                    <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </form>
+        </section>
+        <!-- footer區 -->
+        <footer id="footer">
+          <div class="footer-box">
+            <div class="footer-top">
+              <div class="footer-top-left">
+                <a href="./index.html"
+                  ><img src="./images/footer-logo.svg" alt="footer-logo"
+                /></a>
+              </div>
+              <div class="footer-top-right">
+                <div class="footer-top-right-1">
+                  <span class="icon-mail"></span>
+                  <span>訂閱電子報</span>
+                </div>
+                <div class="footer-top-right-2">
+                  <span
+                    >立即註冊訂閱，讓您即時了解 SD Canelés 的最新資訊。</span
+                  >
+                </div>
+                <form class="footer-top-right-3" id="newsletterForm">
+                  <label for="newsletter"></label>
+                  <input
+                    type="email"
+                    name="newsletter"
+                    id="newsletter"
+                    placeholder="請輸入信箱"
+                    autocomplete="off"
+                    onkeydown="validationNewsletter()"
+                  />
+                  <span id="newsletterMsg"></span>
+                  <button type="button" class="pop-btn">
+                    <img
+                      src="./images/send.svg"
+                      alt="subscribe-newsletter-button"
+                    />
+                  </button>
+                  <div class="modal-container">
+                    <div class="newsletter-modal">
+                      <p>Thank You For Subscribing !</p>
+                      <span class="x" draggable="true" aria-label="Close"
+                        >&times;</span
+                      >
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <div class="footer-bottom-left">
+                <span>© 2022 SD Canelés. All Rights Reserved.</span>
+              </div>
+              <div class="footer-bottom-right">
+                <a href="./index.html">首頁</a>
+                <a href="./pages/news.html">最新消息</a>
+                <a href="./pages/shops.html">店鋪夥伴</a>
+                <a href="./pages/product.html">商品一覽</a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
 
         <!-- shops -->
         <div class="shops"></div>
@@ -1175,6 +1281,7 @@
     <script src="./js/slick.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/form-validation.js"></script>
+    <script src="./js/validationNewsletter.js"></script>
     <!-- mapbox -->
     <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
     <script src="./js/map.js"></script>

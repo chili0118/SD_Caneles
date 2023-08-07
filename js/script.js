@@ -233,7 +233,6 @@ function shopsImages(shops) {
   }
   return htmlContent;
 }
-
 bubblesShops.innerHTML = shopsImages(shops);
 
 let homeShopsData = [

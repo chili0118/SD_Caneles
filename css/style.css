@@ -2934,13 +2934,12 @@ textarea:hover,
 	left: 0;
 	display: block;
 	visibility: hidden;
-	color: #000;
+  color: #000;
 	font-size: 12px;
 	font-weight: 300;
 	font-style: italic;
 	padding: 4px 4px 0 4px;
 }
-
 .check-box svg {
 	position: absolute;
 	top: 50%;
@@ -3006,6 +3005,14 @@ svg path {
 	stroke-dashoffset: 0;
 	transition: 1s;
 	transition-delay: 1s;
+}
+
+svg path {
+	stroke-width: 2;
+	stroke: #fff;
+	stroke-dasharray: 34;
+	stroke-dashoffset: 34;
+	stroke-linecap: round;
 }
 
 .w-100 {
