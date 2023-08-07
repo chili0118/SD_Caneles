@@ -235,61 +235,6 @@ function shopsImages(shops) {
 }
 bubblesShops.innerHTML = shopsImages(shops);
 
-<<<<<<< HEAD
-//店家logo區 
-
-const logos = [
-  {
-    title: 'shop logo 1',
-    logo: './images/dessert_logo-01.png',
-  },
-  {
-    title: 'shop logo 2',
-    logo: './images/dessert_logo-02.png',
-  },
-  {
-    title: 'shop logo 3',
-    logo: './images/dessert_logo-03.png',
-  },
-  {
-    title: 'shop logo 4',
-    logo: './images/dessert_logo-04.png',
-  },
-  {
-    title: 'shop logo 5',
-    logo: './images/dessert_logo-05.png',
-  },
-  {
-    title: 'shop logo 6',
-    logo: './images/dessert_logo-06.png',
-  },
-  {
-    title: 'shop logo 7',
-    logo: './images/dessert_logo-07.png',
-  },
-  {
-    title: 'shop logo 8',
-    logo: './images/dessert_logo-08.png',
-  },
-  {
-    title: 'shop logo 9',
-    logo: './images/dessert_logo-09.png',
-  },
-  {
-    title: 'shop logo 10',
-    logo: './images/dessert_logo-10.png',
-  },
-]
-const shopsLogo = document.querySelector('#shops_logo');
-
-function shopLogo(logos) {
-  let htmlContent = `<div class="shop-logo">`
-  for (let i = 0; i < 2; i++) {
-    let shopLogoTop = `<div class="shop-logo-top">`
-    for(let i = 0; i < logos.length-1; i++) {
-      shopLogoTop += 
-      `<a href="#"><img src="${logos[i].logo}" alt="${logos[i].title}"/></a>`
-=======
 let homeShopsData = [
   // 01
   {
@@ -574,38 +519,21 @@ function shopLogo(homeShopsData) {
     for (let j = 0; j < homeShopsData.length - 1; j++) {
       shopLogoTop +=
         `<a href="#" class="logo-link"><img src="${homeShopsData[j].img}" alt="${homeShopsData[j].title}"/></a>`
->>>>>>> upstream/main
     }
     shopLogoTop += `</div>`
     htmlContent += shopLogoTop
   }
   htmlContent += `</div> <div class="shop-logo2">`
-<<<<<<< HEAD
-  
-  for (let i = 0; i < 2; i++) {
-    let shopLogoBottom = `<div class="shop-logo-bottom">`
-    for(let i = 0; i < logos.length-1; i++) {
-      shopLogoBottom += 
-      `<a href="#"><img src="${logos[i].logo}" alt="${logos[i].title}"/></a>`
-=======
 
   for (let i = 0; i < 2; i++) {
     let shopLogoBottom = `<div class="shop-logo-bottom">`
     for (let j = 0; j < homeShopsData.length - 1; j++) {
       shopLogoBottom +=
         `<a href="#" class="logo-link"><img src="${homeShopsData[j].img}" alt="${homeShopsData[j].title}"/></a>`
->>>>>>> upstream/main
     }
     shopLogoBottom += `</div>`
     htmlContent += shopLogoBottom
   }
-<<<<<<< HEAD
-  
-  htmlContent += `</div>`
-  return htmlContent
-}
-shopsLogo.innerHTML = shopLogo(logos)
-=======
 
   htmlContent += `</div>`
   return htmlContent
@@ -620,7 +548,6 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   })
 })
->>>>>>> upstream/main
 
 $(function () {
   $(window).on("scroll", function () {
@@ -767,10 +694,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> upstream/main

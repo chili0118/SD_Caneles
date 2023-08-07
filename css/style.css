@@ -2929,28 +2929,16 @@ textarea:hover,
 }
 
 #newsletterMsg {
-<<<<<<< HEAD
-	/* footer-top-right 才不會位移*/
-	position: absolute;
-	top:100%;
-=======
 	position: absolute;
 	top: 100%;
->>>>>>> upstream/main
 	left: 0;
 	display: block;
 	visibility: hidden;
   color: #000;
 	font-size: 12px;
-<<<<<<< HEAD
-  font-weight: 300;
-  font-style: italic;
-  padding: 4px 4px 0 4px;
-=======
 	font-weight: 300;
 	font-style: italic;
 	padding: 4px 4px 0 4px;
->>>>>>> upstream/main
 }
 .check-box svg {
 	position: absolute;
@@ -3134,12 +3122,8 @@ svg path {
 	flex-direction: column;
 }
 
-<<<<<<< HEAD
-.footer-top-right div, .footer-top-right form {
-=======
 .footer-top-right div,
 .footer-top-right form {
->>>>>>> upstream/main
 	margin: 5px 0;
 }
 
@@ -3218,43 +3202,6 @@ svg path {
 	margin-right: 5px;
 }
 
-<<<<<<< HEAD
-.modal-container {
-    position: relative;
-    inset: 0;
-    height: 100%;
-    width: 100%;
-    visibility: hidden;
-}
-
-.footer-top-right-3  .newsletter-modal {
-		color: #FFBE17;
-		position: absolute;  /*給msg定位*/
-    background: rgba(255, 255, 255, 0.2);
-    width: 100%;
-		height: 2.2rem; /*背景色撐開*/
-    padding: 3px;
-    border-radius: 6px;
-		inset: 50%;
-    transform: translate(-50%, -50%);
-		top: 10px;
-    font-size: large;
-    line-height: 2rem;
-    letter-spacing: 0.5px;
-    word-spacing: 5px;
-		text-align: center;
-		/* padding-top: 3px;無效因為absolute */
-		/* animation: 10s drop ease-in-out;  */
-}
-.x {
-    position: absolute;
-    inset: 4% 4% auto auto;
-    font-size: 2.5rem;
-    cursor: pointer;
-}
-
-=======
->>>>>>> upstream/main
 .footer-bottom span,
 .footer-bottom a {
 	display: block;

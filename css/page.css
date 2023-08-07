@@ -939,10 +939,6 @@
     color: #170907;
     font-weight: 600;
 }
-<<<<<<< HEAD
-#newsletter-label {
-    display: inline;
-=======
 
 #newsletter-label {
     display: inline;
@@ -950,5 +946,4 @@
 
 .footer-top-right-3 button {
     top: 11px;
->>>>>>> upstream/main
 }
