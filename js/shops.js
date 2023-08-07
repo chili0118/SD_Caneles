@@ -1,14 +1,14 @@
-let shopFliter = document.querySelector('.shops-township').children;
+let shopFilter = document.querySelector('.shops-township').children;
 let activityFilter = document.querySelector('.shops-activity').children;
 let shopItem = document.querySelector('.shops').children;
 let areaBtn = document.querySelectorAll('.shops-township input[type="checkbox"]');
 let activityBtn = document.querySelectorAll('.shops-activity input[type="checkbox"]');
 
-for (let i = 0; i < shopFliter.length; i++) {
-    shopFliter[i].addEventListener('click', function () {
+for (let i = 0; i < shopFilter.length; i++) {
+    shopFilter[i].addEventListener('click', function () {
 
-        for (let j = 0; j < shopFliter.length; j++) {
-            let checkArea = shopFliter[j].querySelector('input[type="checkbox"]');
+        for (let j = 0; j < shopFilter.length; j++) {
+            let checkArea = shopFilter[j].querySelector('input[type="checkbox"]');
             checkArea.checked = false;
         }
 
@@ -73,8 +73,8 @@ let shopsData = [
     {
         id: 0,
         brand: `Flower Dessert`,
-        bannerImg: `../images/shops-1.jpg`,
-        brandLogo: `../images/dessert_logo-01.png`,
+        bannerImg: `../images/shops-1.webp`,
+        brandLogo: `../images/dessert_logo-01.webp`,
         open: `09:00 - 17:00`,
         phone: `02-23928179`,
         add: `台北市大安區新生南路三段84號一樓`,
@@ -105,8 +105,8 @@ let shopsData = [
     {
         id: 1,
         brand: `鑽品咖啡館`,
-        bannerImg: `../images/shops-2.jpg`,
-        brandLogo: `../images/dessert_logo-02.png`,
+        bannerImg: `../images/shops-2.webp`,
+        brandLogo: `../images/dessert_logo-02.webp`,
         open: `10:00 - 18:00`,
         phone: `02-98765432`,
         add: `台北市大同區重慶北路200號`,
@@ -129,8 +129,8 @@ let shopsData = [
     {
         id: 2,
         brand: `Happy Cake`,
-        bannerImg: `../images/shops-3.jpg`,
-        brandLogo: `../images/dessert_logo-03.png`,
+        bannerImg: `../images/shops-3.webp`,
+        brandLogo: `../images/dessert_logo-03.webp`,
         open: `10:00 - 21:00`,
         phone: `02-34567890`,
         add: `台北市士林區天母西路300號`,
@@ -157,8 +157,8 @@ let shopsData = [
     {
         id: 3,
         brand: `MJ 甜品`,
-        bannerImg: `../images/shops-4.jpg`,
-        brandLogo: `../images/dessert_logo-04.png`,
+        bannerImg: `../images/shops-4.webp`,
+        brandLogo: `../images/dessert_logo-04.webp`,
         open: `08:30 - 16:30`,
         phone: `02-87654321`,
         add: `台北市大同區重慶北路200號`,
@@ -181,8 +181,8 @@ let shopsData = [
     {
         id: 4,
         brand: `海點麵包坊`,
-        bannerImg: `../images/shops-5.jpg`,
-        brandLogo: `../images/dessert_logo-05.png`,
+        bannerImg: `../images/shops-5.webp`,
+        brandLogo: `../images/dessert_logo-05.webp`,
         open: `13:00 - 20:30`,
         phone: `02-23456789`,
         add: `台北市松山區西寧南路500號`,
@@ -201,8 +201,8 @@ let shopsData = [
     {
         id: 5,
         brand: `蕾妮雅甜點實驗室`,
-        bannerImg: `../images/shops-6.jpg`,
-        brandLogo: `../images/dessert_logo-06.png`,
+        bannerImg: `../images/shops-6.webp`,
+        brandLogo: `../images/dessert_logo-06.webp`,
         open: `11:00 - 18:00`,
         phone: `02-76543210`,
         add: `台北市中正區瑞湖街600號`,
@@ -225,8 +225,8 @@ let shopsData = [
     {
         id: 6,
         brand: `MU MING`,
-        bannerImg: `../images/shops-7.jpg`,
-        brandLogo: `../images/dessert_logo-07.png`,
+        bannerImg: `../images/shops-7.webp`,
+        brandLogo: `../images/dessert_logo-07.webp`,
         open: `10:00 - 18:00`,
         phone: `02-45678901`,
         add: `台北市信義區基隆路700號`,
@@ -245,8 +245,8 @@ let shopsData = [
     {
         id: 7,
         brand: `熊貝貝`,
-        bannerImg: `../images/shops-8.jpg`,
-        brandLogo: `../images/dessert_logo-08.png`,
+        bannerImg: `../images/shops-8.webp`,
+        brandLogo: `../images/dessert_logo-08.webp`,
         open: `10:00 - 21:00`,
         phone: `02-65432109`,
         add: `台北市大安區忠孝東路800號`,
@@ -277,8 +277,8 @@ let shopsData = [
     {
         id: 8,
         brand: `御品甜點`,
-        bannerImg: `../images/shops-9.jpg`,
-        brandLogo: `../images/dessert_logo-09.png`,
+        bannerImg: `../images/shops-9.webp`,
+        brandLogo: `../images/dessert_logo-09.webp`,
         open: `11:00 - 20:00`,
         phone: `02-78905432`,
         add: `台北市大同區舊莊街900號`,
@@ -301,8 +301,8 @@ let shopsData = [
     {
         id: 9,
         brand: `Canelé`,
-        bannerImg: `../images/shops-10.jpg`,
-        brandLogo: `../images/dessert_logo-10.png`,
+        bannerImg: `../images/shops-10.webp`,
+        brandLogo: `../images/dessert_logo-10.webp`,
         open: `14:00 - 22:00`,
         phone: `02-32109876`,
         add: `台北市信義區木柵路1001號`,

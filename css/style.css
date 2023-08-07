@@ -139,12 +139,19 @@ table {
 
 /* eric/css/reset/end. */
 
+html {
+	/* for Firefox  */
+	overflow-y: scroll;
+	scrollbar-color: rgba(201, 190, 178, .8) transparent;
+	scrollbar-width: thin;
+}
+
 body {
 	font-family: 'Shippori Mincho', 'Noto Serif TC', serif;
 	-webkit-font-smoothing: antialiased;
 	/*設定文字的平滑效果*/
 	/* antialiased: 去除文字上的鋸齒狀，文字會看起來更輕一點，也是較推薦的優化方式  */
-	background-image: url(../images/body-bg.jpg);
+	background-image: url(../images/body-bg.webp);
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
@@ -171,6 +178,43 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-track {
 	background: #170907;
+}
+
+.loading {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: #170907;
+	background-image: url(../images/body-bg.webp);
+	background-size: cover;
+	margin: 0 auto;
+	pointer-events: none;
+	z-index: 1002;
+	transition: opacity 1s;
+}
+
+.loading .load-line {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 10px;
+	height: 5px;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	transition: width 2s ease;
+}
+
+.loading .percentage {
+	position: absolute;
+	/* 設置百分比元素為絕對定位 */
+	top: 45%;
+	/* 將百分比元素置中 */
+	left: 50%;
+	transform: translate(-50%, -50%);
+	/* 使百分比元素完全置中 */
+	font-size: 24px;
+	font-weight: bold;
+	color: #fff;
 }
 
 
@@ -234,8 +278,8 @@ body::-webkit-scrollbar-track {
 	z-index: 1000;
 	top: 55px;
 	right: 80px;
-	-webkit-appearance: none;
 	appearance: none;
+	-webkit-appearance: none;
 	outline: none;
 }
 
@@ -306,7 +350,7 @@ body::-webkit-scrollbar-track {
 	width: 100%;
 	background-size: cover;
 	background-position: center;
-	background-image: url(../images/banner-5.jpg);
+	background-image: url(../images/banner-5.webp);
 	filter: sepia(150%) grayscale(50%) brightness(20%);
 	transition: .3s linear;
 	z-index: -1;
@@ -317,15 +361,15 @@ body::-webkit-scrollbar-track {
 }
 
 #menu a:hover:nth-child(3)~.menu-img {
-	background-image: url("../images/banner-2.jpg");
+	background-image: url("../images/banner-2.webp");
 }
 
 #menu a:hover:nth-child(4)~.menu-img {
-	background-image: url("../images/menu-4.jpg");
+	background-image: url("../images/menu-4.webp");
 }
 
 #menu a:hover:nth-child(5)~.menu-img {
-	background-image: url("../images/menu-5.jpg");
+	background-image: url("../images/menu-5.webp");
 }
 
 @media (max-width: 768px) {
@@ -468,7 +512,7 @@ body::-webkit-scrollbar-track {
 	content: '';
 	display: block;
 	position: absolute;
-	background-image: url(../images/Canelés.png);
+	background-image: url(../images/caneles.webp);
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -524,6 +568,36 @@ body::-webkit-scrollbar-track {
 	}
 }
 
+.video-source {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	color: #fff;
+	opacity: .3;
+	font-size: 12px;
+	letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+	.video-source {
+		font-size: 10px;
+		letter-spacing: 0px;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		text-align: right;
+	}
+
+	.video-source span {
+		display: block;
+		width: 100%;
+		line-height: 1.2;
+	}
+
+}
+
+
 /* about */
 section#about {
 	position: relative;
@@ -573,7 +647,7 @@ section#about {
 .contents-one {
 	position: relative;
 	height: 100%;
-	background-image: url("../images/contents-one-bg.png");
+	background-image: url("../images/contents-one-bg.webp");
 }
 
 .about-page-one {
@@ -679,7 +753,7 @@ section#about {
 .contents-two {
 	position: relative;
 	height: 100%;
-	background-image: url("../images/contents-two-bg.png");
+	background-image: url("../images/contents-two-bg.webp");
 }
 
 .about-page-two {
@@ -719,6 +793,7 @@ h2.about-page-two-h2 {
 	display: flex;
 	bottom: 30px;
 	left: 50%;
+	opacity: .75;
 	transform: translateX(-50%);
 }
 
@@ -895,23 +970,23 @@ h2.about-page-two-h2 {
 }
 
 .icon1 .button_border:hover .border_in .bg_focus {
-	background-image: url("../images/Vanilla.png");
+	background-image: url("../images/Vanilla.webp");
 }
 
 .icon2 .button_border:hover .border_in .bg_focus {
-	background-image: url("../images/egg.png");
+	background-image: url("../images/egg.webp");
 }
 
 .icon3 .button_border:hover .border_in .bg_focus {
-	background-image: url("../images/flour.png");
+	background-image: url("../images/flour.webp");
 }
 
 .icon4 .button_border:hover .border_in .bg_focus {
-	background-image: url("../images/rum.png");
+	background-image: url("../images/rum.webp");
 }
 
 .icon5 .button_border:hover .border_in .bg_focus {
-	background-image: url("../images/milk.png");
+	background-image: url("../images/milk.webp");
 }
 
 .button_border:hover .border_in span {
@@ -934,7 +1009,7 @@ h2.about-page-two-h2 {
 }
 
 .icon4.firstView .button_border .border_in .bg_focus {
-	background-image: url("../images/rum.png");
+	background-image: url("../images/rum.webp");
 }
 
 .icon4.firstView .button_border .border_in {
@@ -974,26 +1049,26 @@ h2.about-page-two-h2 {
 }
 
 .icon1 span {
-	background-image: url("../images/icon-vanilla.png");
+	background-image: url("../images/icon-vanilla.svg");
 }
 
 .icon2 span {
-	background-image: url("../images/icon-egg.png");
+	background-image: url("../images/icon-egg.svg");
 }
 
 /* 3 flour  */
 .icon3 span {
-	background-image: url("../images/icon-flour.png");
+	background-image: url("../images/icon-flour.svg");
 }
 
 /* 4 rum */
 .icon4 span {
-	background-image: url("../images/icon-rum.png");
+	background-image: url("../images/icon-rum.svg");
 }
 
 /*milk*/
 .icon5 span {
-	background-image: url("../images/icon-milk.png");
+	background-image: url("../images/icon-milk.svg");
 }
 
 .button_border,
@@ -1413,27 +1488,27 @@ p em {
 }
 
 .news-card1 {
-	background-image: url(../images/news-img1.jpg);
+	background-image: url(../images/news-img1.webp);
 	grid-area: card1;
 }
 
 .news-card2 {
-	background-image: url(../images/news-img2.jpg);
+	background-image: url(../images/news-img2.webp);
 	grid-area: card2;
 }
 
 .news-card3 {
-	background-image: url(../images/news-img3.jpg);
+	background-image: url(../images/news-img3.webp);
 	grid-area: card3;
 }
 
 .news-card4 {
-	background-image: url(../images/news-img4.jpg);
+	background-image: url(../images/news-img4.webp);
 	grid-area: card4;
 }
 
 .news-card5 {
-	background-image: url(../images/news-img5.jpg);
+	background-image: url(../images/news-img5.webp);
 	grid-area: card5;
 }
 
@@ -2014,7 +2089,7 @@ svg,
 #customers {
 	width: 100%;
 	height: 100vh;
-	background-image: url(../images/bg-customers.jpg);
+	background-image: url(../images/bg-customers.webp);
 	display: flex;
 	justify-content: space-around;
 	background-repeat: no-repeat;
@@ -2679,7 +2754,7 @@ svg,
 
 /* 表單 */
 .page-bottom-bg {
-	background-image: url(../images/form-bg.png);
+	background-image: url(../images/form-bg.webp);
 	background-position: center center;
 	width: 100%;
 	height: 100%;
@@ -2853,22 +2928,29 @@ textarea:hover,
 	opacity: 0;
 }
 
-#newsletter.valid #newsletterInput {
-	border-bottom: 1.5px solid #FFBE17;
-}
-
 #newsletterMsg {
+<<<<<<< HEAD
 	/* footer-top-right 才不會位移*/
 	position: absolute;
 	top:100%;
+=======
+	position: absolute;
+	top: 100%;
+>>>>>>> upstream/main
 	left: 0;
 	display: block;
 	visibility: hidden;
   color: #000;
 	font-size: 12px;
+<<<<<<< HEAD
   font-weight: 300;
   font-style: italic;
   padding: 4px 4px 0 4px;
+=======
+	font-weight: 300;
+	font-style: italic;
+	padding: 4px 4px 0 4px;
+>>>>>>> upstream/main
 }
 .check-box svg {
 	position: absolute;
@@ -2908,6 +2990,14 @@ textarea:hover,
 		right: 1.5%;
 		opacity: 1;
 	}
+}
+
+svg path {
+	stroke-width: 2;
+	stroke: #fff;
+	stroke-dasharray: 34;
+	stroke-dashoffset: 34;
+	stroke-linecap: round;
 }
 
 @media (max-width: 768px) {
@@ -3044,7 +3134,12 @@ svg path {
 	flex-direction: column;
 }
 
+<<<<<<< HEAD
 .footer-top-right div, .footer-top-right form {
+=======
+.footer-top-right div,
+.footer-top-right form {
+>>>>>>> upstream/main
 	margin: 5px 0;
 }
 
@@ -3096,6 +3191,25 @@ svg path {
 	height: 20px;
 }
 
+.footer-top-right-3 .newsletter-modal {
+	color: #fff;
+	position: absolute;
+	background: rgba(255, 255, 255, .2);
+	width: 100%;
+	height: 2.2rem;
+	padding: 3px;
+	border-radius: 6px;
+	inset: 50%;
+	transform: translate(-50%, -50%);
+	top: 10px;
+	font-size: 16px;
+	line-height: 2rem;
+	letter-spacing: 0.5px;
+	word-spacing: 5px;
+	text-align: center;
+
+}
+
 .icon-mail {
 	background-image: url(../images/mail.svg);
 	width: 20px;
@@ -3104,6 +3218,7 @@ svg path {
 	margin-right: 5px;
 }
 
+<<<<<<< HEAD
 .modal-container {
     position: relative;
     inset: 0;
@@ -3138,6 +3253,8 @@ svg path {
     cursor: pointer;
 }
 
+=======
+>>>>>>> upstream/main
 .footer-bottom span,
 .footer-bottom a {
 	display: block;

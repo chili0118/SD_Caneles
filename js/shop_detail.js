@@ -1,8 +1,6 @@
 window.addEventListener('DOMContentLoaded', function () {
-    // 從 localStorage 讀取資料
     const shopData = JSON.parse(localStorage.getItem('currentShop'));
-    // console.log(shopData);
-    // 將資料顯示在對應的地方
+    
     const shopNameElement = document.querySelector('#shop-breadcrumb h3');
     const mainShopName = document.querySelector('.brand-name');
     const shopBanner = document.querySelector('.shop-info-banner img');
@@ -23,7 +21,7 @@ window.addEventListener('DOMContentLoaded', function () {
     for (let i = 0; i < shopData.product.length; i++) {
         let products = document.createElement('li');
         products.innerHTML = `
-        <div class="shop-product-list-img"><img src="../images/product.png" alt=""></div>
+        <div class="shop-product-list-img"><img src="../images/product.png" alt="產品照"></div>
         <div class="shop-product-list-content">
             <h5>${shopData.product[i].productName}</h5>
             <p>${shopData.product[i].price}</p>
