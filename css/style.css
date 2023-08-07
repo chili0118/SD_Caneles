@@ -139,6 +139,13 @@ table {
 
 /* eric/css/reset/end. */
 
+html {
+	/* for Firefox  */
+	overflow-y: scroll;
+	scrollbar-color: rgba(201, 190, 178, .8) transparent;
+	scrollbar-width: thin;
+}
+
 body {
 	font-family: 'Shippori Mincho', 'Noto Serif TC', serif;
 	-webkit-font-smoothing: antialiased;
@@ -186,7 +193,7 @@ body::-webkit-scrollbar-track {
 	transition: opacity 1s;
 }
 
-.loading .load-circle {
+.loading .load-line {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -587,7 +594,7 @@ body::-webkit-scrollbar-track {
 		width: 100%;
 		line-height: 1.2;
 	}
-	
+
 }
 
 
@@ -2923,7 +2930,7 @@ textarea:hover,
 
 #newsletterMsg {
 	position: absolute;
-	top:100%;
+	top: 100%;
 	left: 0;
 	display: block;
 	visibility: hidden;
@@ -3108,7 +3115,8 @@ svg path {
 	flex-direction: column;
 }
 
-.footer-top-right div, .footer-top-right form {
+.footer-top-right div,
+.footer-top-right form {
 	margin: 5px 0;
 }
 
@@ -3160,7 +3168,7 @@ svg path {
 	height: 20px;
 }
 
-.footer-top-right-3  .newsletter-modal {
+.footer-top-right-3 .newsletter-modal {
 	color: #fff;
 	position: absolute;
 	background: rgba(255, 255, 255, .2);
@@ -3176,7 +3184,7 @@ svg path {
 	letter-spacing: 0.5px;
 	word-spacing: 5px;
 	text-align: center;
-	
+
 }
 
 .icon-mail {

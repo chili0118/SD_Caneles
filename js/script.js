@@ -1,40 +1,33 @@
 "use strict";
 
 // 在網頁加載完畢後，隱藏 loading 效果
-// 等待網頁載入完畢後再執行程式碼
-// 檢查 sessionStorage 中是否已載入過
-let loaded = sessionStorage.getItem('loaded');
+const loaded = sessionStorage.getItem('loaded');
 
 if (!loaded) {
-  let loading = document.querySelector('.loading');
-  let widthLoad = document.querySelector('.load-circle');
-  let percentageElement = document.querySelector('.percentage');
+  const loading = document.querySelector('.loading');
+  const widthLoad = document.querySelector('.load-line');
+  const percentageElement = document.querySelector('.percentage');
   let percentage = 0;
 
-  // 禁止滾動卷軸
   document.body.style.overflow = 'hidden';
 
-  // 執行載入過程並更新百分比
   function updatePercentage() {
+    percentageElement.textContent = percentage + '%';
+    widthLoad.style.width = percentage + '%';
+    percentage++;
+
     if (percentage <= 100) {
-      percentageElement.textContent = percentage + '%';
-      widthLoad.style.width = percentage + '%';
-      percentage++;
-      setTimeout(updatePercentage, 20); // 延遲 20 毫秒後更新百分比
+      requestAnimationFrame(updatePercentage);
     } else {
-      // 將載入狀態儲存到 sessionStorage
       sessionStorage.setItem('loaded', true);
-      // 隱藏 loading 效果
       loading.style.opacity = 0;
-      // 解除禁止滾動卷軸
       document.body.style.overflow = 'auto';
     }
   }
 
-  updatePercentage();
+  requestAnimationFrame(updatePercentage);
 } else {
-  // 隱藏 loading 效果
-  var loading = document.querySelector('.loading');
+  const loading = document.querySelector('.loading');
   loading.style.display = 'none';
 }
 
@@ -547,10 +540,10 @@ function shopLogo(homeShopsData) {
 }
 shopsLogo.innerHTML = shopLogo(homeShopsData)
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const logoLink = document.querySelectorAll('.logo-link');
   logoLink.forEach(link => {
-    link.addEventListener('click', function(e) {
+    link.addEventListener('click', function (e) {
       e.preventDefault();
     })
   })
@@ -697,7 +690,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // 開啟新分頁
       window.open(brandUrl, '_blank');
-      
+
     });
   }
 });

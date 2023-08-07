@@ -1,8 +1,6 @@
 window.addEventListener('DOMContentLoaded', function () {
-    // 從 localStorage 讀取資料
     const shopData = JSON.parse(localStorage.getItem('currentShop'));
-    // console.log(shopData);
-    // 將資料顯示在對應的地方
+    
     const shopNameElement = document.querySelector('#shop-breadcrumb h3');
     const mainShopName = document.querySelector('.brand-name');
     const shopBanner = document.querySelector('.shop-info-banner img');
