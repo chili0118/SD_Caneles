@@ -1,9 +1,9 @@
 "use strict";
 
 // 在網頁加載完畢後，隱藏 loading 效果
-const loaded = sessionStorage.getItem('loaded');
+const isFirstVisit = !sessionStorage.getItem('visited');
 
-if (!loaded) {
+if (isFirstVisit) {
   const loading = document.querySelector('.loading');
   const widthLoad = document.querySelector('.load-line');
   const percentageElement = document.querySelector('.percentage');
@@ -19,7 +19,8 @@ if (!loaded) {
     if (percentage <= 100) {
       requestAnimationFrame(updatePercentage);
     } else {
-      sessionStorage.setItem('loaded', true);
+      sessionStorage.setItem('visited', true);
+      sessionStorage.setItem('loaded', true); 
       loading.style.opacity = 0;
       document.body.style.overflow = 'auto';
     }

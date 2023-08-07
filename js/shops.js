@@ -1,14 +1,14 @@
-let shopFliter = document.querySelector('.shops-township').children;
+let shopFilter = document.querySelector('.shops-township').children;
 let activityFilter = document.querySelector('.shops-activity').children;
 let shopItem = document.querySelector('.shops').children;
 let areaBtn = document.querySelectorAll('.shops-township input[type="checkbox"]');
 let activityBtn = document.querySelectorAll('.shops-activity input[type="checkbox"]');
 
-for (let i = 0; i < shopFliter.length; i++) {
-    shopFliter[i].addEventListener('click', function () {
+for (let i = 0; i < shopFilter.length; i++) {
+    shopFilter[i].addEventListener('click', function () {
 
-        for (let j = 0; j < shopFliter.length; j++) {
-            let checkArea = shopFliter[j].querySelector('input[type="checkbox"]');
+        for (let j = 0; j < shopFilter.length; j++) {
+            let checkArea = shopFilter[j].querySelector('input[type="checkbox"]');
             checkArea.checked = false;
         }
 
