@@ -55,6 +55,7 @@ cd SD_Caneles
 |                       分頁                        |
 |        ![](./assets/SD%20Canelés-news.gif)        |
 |     ![](./assets/SD%20Canelés-area-shops.gif)     |
+|      ![](./assets/SD%20Canelés-one-shop.gif)      |
 |      ![](./assets/SD%20Canelés-product.gif)       |
 
 ### 專案技術
