@@ -1,6 +1,6 @@
 # Search Dessert Canelés
 
-![Search-Dessert-Canelés-website cover](./assets/SD%20Canelés-banner.gif)
+![Search-Dessert-Canelés-website cover](./assets/SD%20Caneles-banner.gif)
 
 Search Dessert Canelés 尋找可麗露
 
@@ -47,16 +47,16 @@ cd SD_Caneles
 
 |                       首頁                        |
 | :-----------------------------------------------: |
-|       ![](./assets/SD%20Canelés-about.png)        |
-|       ![](./assets/SD%20Canelés-shops.gif)        |
-|        ![](./assets/SD%20Canelés-map.png)         |
-|      ![](./assets/SD%20Canelés-contact.gif)       |
+|       ![](./assets/SD%20Caneles-about.png)        |
+|       ![](./assets/SD%20Caneles-shops.gif)        |
+|        ![](./assets/SD%20Caneles-map.png)         |
+|      ![](./assets/SD%20Caneles-contact.gif)       |
 | ![](./assets/SD%20Canelés-email-subscription.gif) |
 |                       分頁                        |
-|        ![](./assets/SD%20Canelés-news.gif)        |
-|     ![](./assets/SD%20Canelés-area-shops.gif)     |
-|      ![](./assets/SD%20Canelés-one-shop.gif)      |
-|      ![](./assets/SD%20Canelés-product.gif)       |
+|        ![](./assets/SD%20Caneles-news.gif)        |
+|     ![](./assets/SD%20Caneles-area-shops.gif)     |
+|      ![](./assets/SD%20Caneles-one-shop.gif)      |
+|      ![](./assets/SD%20Caneles-product.gif)       |
 
 ### 專案技術
 
